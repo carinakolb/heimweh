@@ -632,6 +632,48 @@ const CSS = `
 @keyframes hwFadeIn { to { opacity: 1; } }
 @keyframes hwScrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
+.heimweh-page .desire {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 90px 48px;
+  text-align: center;
+  position: relative;
+}
+.heimweh-page .desire::before,
+.heimweh-page .desire::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+  margin: 0 auto 32px;
+}
+.heimweh-page .desire::after { margin: 32px auto 0; }
+.heimweh-page .desire-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.heimweh-page .desire-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.45;
+  color: var(--gold-light);
+}
+.heimweh-page .desire-text strong {
+  font-weight: 600;
+  color: var(--gold);
+  font-style: normal;
+}
+@media (max-width: 820px) {
+  .heimweh-page .desire { padding: 64px 24px; }
+}
+
 @media (max-width: 820px) {
   .heimweh-page nav { padding: 22px 24px; }
   .heimweh-page .hero { padding: 0 24px 80px; }
