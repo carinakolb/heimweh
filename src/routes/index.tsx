@@ -79,7 +79,7 @@ const CSS = `
 .hw .hero-scroll { position:absolute; bottom:48px; right:52px; display:flex; flex-direction:column; align-items:center; gap:12px; opacity:0; animation:hwFadeIn 1s 2s forwards; }
 .hw .hero-scroll span { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); writing-mode:vertical-rl; }
 .hw .hero-scroll-line { width:1px; height:80px; background:linear-gradient(to bottom,var(--gold),transparent); animation:hwScrollPulse 2.5s infinite; }
-.hw .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0.22; z-index:0; }
+.hw .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0.5; z-index:0; }
 .hw .hero > * { position:relative; z-index:1; }
 
 .hw .clarity-bar { background:var(--mid); padding:40px 52px; display:flex; gap:52px; flex-wrap:wrap; align-items:center; border-top:1px solid rgba(201,169,110,0.15); }
