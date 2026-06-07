@@ -365,7 +365,7 @@ function Index() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" style={{ backgroundImage: `url(${bridgeImg})` }} />
+        <img src={bridgeImg} alt="" className="hero-bg" />
         <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
