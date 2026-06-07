@@ -380,12 +380,12 @@ function Index() {
       {/* CLARITY BAR */}
       <div className="clarity-bar">
         <span className="clarity-bar-label">Was ist HEIMWEH</span>
-        <div className="clarity-items">
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">3 x 1:1 Session live (je ca. 2h)</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">Core Emotional Bodywork</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">2 Embodiment-Aufnahmen</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">WhatsApp-Begleitung</span></div>
-        </div>
+        <p className="clarity-bar-text">
+          Für Frauen, die müde sind, sich selbst zu verlassen, nur damit andere bleiben. Die im Leisten, im Anpassen, im immer-für-alle-da-sein so viel von sich gegeben haben, dass sie irgendwann vergessen haben, wer sie ohne das alles sind.
+        </p>
+        <p className="clarity-bar-text">
+          Hier findest du den Weg zurück. Nicht durch Willenskraft. Nicht durch noch mehr Disziplin. Sondern durch deinen Körper — den einzigen Ort, von dem Veränderung wirklich ausgeht.
+        </p>
       </div>
 
       {/* SCHMERZ-SPIEGEL */}
