@@ -69,8 +69,8 @@ const CSS = `
 .hw .label { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:20px; }
 .hw .label-dark { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--light-text); font-weight:600; display:block; margin-bottom:20px; }
 
-.hw .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:0 52px 110px; background-color:var(--deep); background-image:var(--hero-bg-image); background-size:cover; background-position:center center; background-repeat:no-repeat; position:relative; overflow:hidden; }
-.hw .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.40) 0%, rgba(26,16,8,0.55) 60%, rgba(26,16,8,0.85) 100%); z-index:0; pointer-events:none; }
+.hw .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:0 52px 110px; background:var(--deep); position:relative; overflow:hidden; }
+.hw .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.35) 0%, rgba(26,16,8,0.55) 60%, rgba(26,16,8,0.85) 100%); z-index:0; pointer-events:none; }
 .hw .hero-label { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:28px; opacity:0; animation:hwFadeUp 1s 0.4s forwards; }
 .hw .hero-title { font-size:clamp(72px,11vw,150px); font-weight:700; line-height:0.92; margin-bottom:36px; opacity:0; animation:hwFadeUp 1s 0.7s forwards; }
 .hw .hero-title em { font-style:italic; color:var(--gold-l); display:block; }
@@ -80,6 +80,7 @@ const CSS = `
 .hw .hero-scroll { position:absolute; bottom:48px; right:52px; display:flex; flex-direction:column; align-items:center; gap:12px; opacity:0; animation:hwFadeIn 1s 2s forwards; }
 .hw .hero-scroll span { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); writing-mode:vertical-rl; }
 .hw .hero-scroll-line { width:1px; height:80px; background:linear-gradient(to bottom,var(--gold),transparent); animation:hwScrollPulse 2.5s infinite; }
+.hw .hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; opacity:0.6; z-index:0 !important; }
 .hw .hero > * { position:relative; z-index:1; }
 
 .hw .clarity-bar { background:var(--mid); padding:40px 52px; display:flex; gap:52px; flex-wrap:wrap; align-items:center; border-top:1px solid rgba(201,169,110,0.15); }
@@ -363,7 +364,8 @@ function Index() {
       </nav>
 
       {/* HERO */}
-      <section className="hero" style={{ ['--hero-bg-image' as any]: `url(${bridgeImg})` }}>
+      <section className="hero">
+        <img src={bridgeImg} alt="" className="hero-bg" />
         <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
