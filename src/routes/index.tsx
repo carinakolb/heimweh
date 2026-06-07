@@ -10,13 +10,13 @@ const natureImg = natureAsset.url;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HEIMWEH — Der Weg zurück zu dir" },
+      { title: "HEIMWEH - Der Weg zurück zu dir" },
       {
         name: "description",
         content:
           "Für Frauen, die nach aussen funktionieren und innerlich längst nicht mehr wissen, wer sie sind. 3 1:1 Sessions, 2 Embodiment-Aufnahmen, WhatsApp-Begleitung.",
       },
-      { property: "og:title", content: "HEIMWEH — Der Weg zurück zu dir" },
+      { property: "og:title", content: "HEIMWEH - Der Weg zurück zu dir" },
       {
         property: "og:description",
         content:
@@ -119,7 +119,7 @@ function Index() {
             </span>
           </h1>
           <p className="text-display mt-10 max-w-xl text-xl italic font-light leading-relaxed text-text-body md:text-2xl">
-            Für die Frau, die nach aussen alles im Griff hat —
+            Für die Frau, die nach aussen alles im Griff hat -
             und innerlich schon lange nicht mehr weiss, wer sie ohne das alles ist.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-4">
@@ -134,7 +134,7 @@ function Index() {
         </div>
       </section>
 
-      {/* MIRROR — Du kennst das */}
+      {/* MIRROR - Du kennst das */}
       <section id="was-ist-heimweh" className="mx-auto max-w-6xl px-6 py-28 md:px-12 md:py-36">
         <Label>Du kennst das vielleicht</Label>
 
@@ -142,7 +142,7 @@ function Index() {
           {[
             {
               t: "„Ich funktioniere. Ich liefere. Ich bin für alle da.",
-              b: "Und abends, wenn es still wird — dieser Druck in der Brust. Diese Leere, die keine Erklärung hat. Du hast alles getan. Und trotzdem fühlt sich irgendetwas falsch an.",
+              b: "Und abends, wenn es still wird - dieser Druck in der Brust. Diese Leere, die keine Erklärung hat. Du hast alles getan. Und trotzdem fühlt sich irgendetwas falsch an.",
             },
             {
               t: "„Ich bin so müde. Aber aufhören kann ich nicht.",
@@ -150,19 +150,19 @@ function Index() {
             },
             {
               t: "„Ich weiss nicht mehr, was ich wirklich will.",
-              b: "Du weisst, was alle anderen wollen. Du spürst, was der Raum braucht, bevor jemand es ausspricht. Aber wann hast du zuletzt gespürt, was du willst — ohne sofort zu prüfen, ob das auch okay ist?",
+              b: "Du weisst, was alle anderen wollen. Du spürst, was der Raum braucht, bevor jemand es ausspricht. Aber wann hast du zuletzt gespürt, was du willst - ohne sofort zu prüfen, ob das auch okay ist?",
             },
             {
               t: "„Allein zu sein macht mir Angst.",
               b: "Nicht Einsamkeit. Sondern die Stille mit dir selbst. Wenn du aufhörst dich abzulenken, kommt alles auf einmal. Die Gedanken, die Stimmen, das Gefühl: Ich kenne mich selbst nicht mehr.",
             },
             {
-              t: "„Ich sage Ja — und meine Nein.",
+              t: "„Ich sage Ja - und meine Nein.",
               b: "Und hasse mich danach dafür. Du siehst dich von aussen zu, wie du wieder einspringst, wieder hältst, wieder lächelst. Während ein Teil in dir leise schreit: Bitte nicht schon wieder.",
             },
             {
               t: "„Der innere Kritiker ist lauter als alles andere.",
-              b: "Egal was du machst, es ist nie genug. Du bist nie genug. Eine Stimme, die schon so lange in dir wohnt, dass du sie für dich selbst hältst — aber sie ist nicht du.",
+              b: "Egal was du machst, es ist nie genug. Du bist nie genug. Eine Stimme, die schon so lange in dir wohnt, dass du sie für dich selbst hältst - aber sie ist nicht du.",
             },
           ].map((c, i) => (
             <div
@@ -188,7 +188,7 @@ function Index() {
             gehöre ich dazu.
             <br />
             <br />
-            Aber dieser Preis — den zahlt dein Körper schon lange.
+            Aber dieser Preis - den zahlt dein Körper schon lange.
           </p>
           <div className="mt-10">
             <CTA>Ich bin bereit für den Weg zurück.</CTA>
@@ -214,7 +214,7 @@ function Index() {
           </h2>
           <p className="mx-auto mt-12 max-w-2xl leading-loose text-text-body">
             Wenn du aus innerer Leere gibst, aus Angst vor Ablehnung, aus dem Glauben,
-            dass du nur geliebt wirst wenn du nützlich bist — dann ist selbst Pause kein
+            dass du nur geliebt wirst wenn du nützlich bist - dann ist selbst Pause kein
             Ausruhen. Es ist nur ein anderer Weg, dich zu verlieren.
             <br />
             <br />
@@ -223,23 +223,23 @@ function Index() {
           </p>
           <GoldLine className="mx-auto my-12" />
           <p className="mx-auto max-w-2xl leading-loose text-text-body">
-            Und nein — noch mehr Wissen wird das nicht lösen. Du weisst schon alles. Du
+            Und nein - noch mehr Wissen wird das nicht lösen. Du weisst schon alles. Du
             bist reflektiert. Du kennst die Muster. Aber dein Körper hat das noch nicht
-            verstanden. Und <em className="text-display italic text-gold-light">da</em> —
-            im Körper — fängt die echte Veränderung an.
+            verstanden. Und <em className="text-display italic text-gold-light">da</em> -
+            im Körper - fängt die echte Veränderung an.
           </p>
           <div className="mt-12">
-            <CTA>Ich bin bereit — zeig mir HEIMWEH</CTA>
+            <CTA>Ich bin bereit - zeig mir HEIMWEH</CTA>
           </div>
         </div>
       </section>
 
-      {/* DESIRE — was du erreichen wirst */}
+      {/* DESIRE - was du erreichen wirst */}
       <section className="mx-auto max-w-6xl px-6 py-28 md:px-12 md:py-36">
         <div className="mx-auto max-w-3xl text-center">
           <Label>Was du durch Heimweh erreichst</Label>
           <h2 className="text-display mt-8 text-4xl leading-tight md:text-6xl">
-            Stell dir vor, du wachst auf —
+            Stell dir vor, du wachst auf -
             <br />
             <em className="italic text-gold-light">und du bist da.</em>
           </h2>
@@ -256,7 +256,7 @@ function Index() {
             },
             {
               before: "„Ich sage Ja, obwohl ich Nein meine.",
-              after: "Du sagst Nein — und dein Körper entspannt sich dabei.",
+              after: "Du sagst Nein - und dein Körper entspannt sich dabei.",
             },
             {
               before: "„Allein zu sein fühlt sich wie Strafe an.",
@@ -268,7 +268,7 @@ function Index() {
             },
             {
               before: "„Der innere Kritiker ist lauter als alles andere.",
-              after: "Deine inneren Stimmen arbeiten für dich — nicht gegen dich.",
+              after: "Deine inneren Stimmen arbeiten für dich - nicht gegen dich.",
             },
             {
               before:
@@ -304,7 +304,7 @@ function Index() {
         <div className="max-w-3xl">
           <Label>Das Angebot</Label>
           <h2 className="text-display mt-6 text-5xl leading-tight md:text-7xl">
-            HEIMWEH —
+            HEIMWEH -
             <br />
             <em className="italic text-gold-light">Der Weg zurück zu dir</em>
           </h2>
@@ -318,17 +318,17 @@ function Index() {
             {
               n: "01",
               t: "Ankommen",
-              b: "Wir schauen gemeinsam, was dich von dir trennt. Welche Muster, welche inneren Stimmen, welche Körperreaktionen dich so lange führen — ohne dass du es wolltest. Dein Nervensystem bekommt zum ersten Mal Raum, sich zu zeigen.",
+              b: "Wir schauen gemeinsam, was dich von dir trennt. Welche Muster, welche inneren Stimmen, welche Körperreaktionen dich so lange führen - ohne dass du es wolltest. Dein Nervensystem bekommt zum ersten Mal Raum, sich zu zeigen.",
             },
             {
               n: "02",
               t: "In die Tiefe",
-              b: "Embodiment Arbeit: Wir gehen dorthin, wo die Worte aufhören. In den Körper. In die Emotionen, die du so lange unterdrückt hast. Die Stimme, die so viel zu sagen hat und nie gehört wurde — sie darf laut sein.",
+              b: "Embodiment Arbeit: Wir gehen dorthin, wo die Worte aufhören. In den Körper. In die Emotionen, die du so lange unterdrückt hast. Die Stimme, die so viel zu sagen hat und nie gehört wurde - sie darf laut sein.",
             },
             {
               n: "03",
               t: "Heimkommen",
-              b: "Integration. Du lernst, wie es sich anfühlt, wirklich bei dir zu sein. Entscheidungen aus dir heraus zu treffen — nicht aus Angst, nicht aus Erwartung. Dieser Frieden, auf den du wartest? Er war immer in dir.",
+              b: "Integration. Du lernst, wie es sich anfühlt, wirklich bei dir zu sein. Entscheidungen aus dir heraus zu treffen - nicht aus Angst, nicht aus Erwartung. Dieser Frieden, auf den du wartest? Er war immer in dir.",
             },
           ].map((s) => (
             <div key={s.n} className="bg-brown-deep p-10 md:p-14">
@@ -369,7 +369,7 @@ function Index() {
               ].map((li) => (
                 <li
                   key={li}
-                  className="relative pl-6 text-sm leading-relaxed text-text-body before:absolute before:left-0 before:text-gold before:content-['—']"
+                  className="relative pl-6 text-sm leading-relaxed text-text-body before:absolute before:left-0 before:text-gold before:content-['-']"
                 >
                   {li}
                 </li>
@@ -410,11 +410,11 @@ function Index() {
             <ul className="mt-10">
               {[
                 "Du nach aussen funktionierst und innerlich weisst, dass da mehr sein muss.",
-                "Du erschöpft bist — nicht körperlich, sondern tief drin.",
+                "Du erschöpft bist - nicht körperlich, sondern tief drin.",
                 "Du dich in Beziehungen verlierst und nicht weisst, wer du ohne das andere bist.",
                 "Du dir selbst gegenüber die strengste Person in deinem Leben bist.",
                 "Du Angst hast, was passiert, wenn du nicht mehr gemocht werden musst.",
-                "Du weisst, dass Nein-Sagen richtig wäre — und es trotzdem nicht kannst.",
+                "Du weisst, dass Nein-Sagen richtig wäre - und es trotzdem nicht kannst.",
                 "Du dir selbst schon lange nicht mehr traust.",
                 "Du spürst: Ich muss zurück zu mir. Aber ich weiss nicht wie.",
               ].map((li, i) => (
@@ -454,27 +454,27 @@ function Index() {
             <div className="mt-12 border-l-2 border-gold bg-brown-warm/50 p-10">
               <p className="text-display text-xl italic leading-snug text-cream md:text-2xl">
                 „Ich setze an, bevor der Zusammenbruch kommt. Dann, wenn du weisst,
-                dass du etwas ändern musst — und noch die Kraft hast, es zu tun."
+                dass du etwas ändern musst - und noch die Kraft hast, es zu tun."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* MOMENT — small moments that catch her */}
+      {/* MOMENT - small moments that catch her */}
       <section className="mx-auto max-w-5xl px-6 py-28 text-center md:py-36">
         <Label>Kleine Momente</Label>
         <h2 className="text-display mx-auto mt-8 max-w-3xl text-4xl leading-tight md:text-6xl">
-          Du wirst diese Momente erkennen —
+          Du wirst diese Momente erkennen -
           <br />
           <em className="italic text-gold-light">weil du sie schon kennst.</em>
         </h2>
 
         <div className="mt-16 space-y-10 text-left">
           {[
-            "Der Moment im Auto, kurz bevor du die Haustüre öffnest. Wenn du noch eine Sekunde lang du selbst bist — bevor du wieder zu der wirst, die alle brauchen.",
+            "Der Moment im Auto, kurz bevor du die Haustüre öffnest. Wenn du noch eine Sekunde lang du selbst bist - bevor du wieder zu der wirst, die alle brauchen.",
             "Der Moment in der Dusche, wenn das Wasser läuft und du weinst, ohne zu wissen warum. Und dann gehst du raus, ziehst dich an, und funktionierst weiter.",
-            "Der Moment, in dem jemand fragt „Wie geht's dir?” und du automatisch „Gut, danke” sagst — und beide wissen, dass das nicht stimmt.",
+            "Der Moment, in dem jemand fragt „Wie geht's dir?” und du automatisch „Gut, danke” sagst - und beide wissen, dass das nicht stimmt.",
             "Der Moment, wenn du Sonntagabends auf dem Sofa sitzt und denkst: Ist das alles? Und gleich darauf: Sei nicht undankbar.",
             "Der Moment, in dem du dich im Spiegel ansiehst und eine Frau siehst, die du nicht mehr kennst.",
           ].map((m, i) => (
@@ -511,13 +511,13 @@ function Index() {
             </p>
             <p className="mt-6 text-sm leading-loose text-text-muted">
               Ich habe meinen Wert in Beziehungen definiert, meine Stabilität durch
-              andere geholt — und alles getan, um nie alleine mit mir zu sein.
+              andere geholt - und alles getan, um nie alleine mit mir zu sein.
               Burnout. Depression. Die Erkenntnis, dass noch mehr Wissen, noch mehr
               Disziplin, noch mehr Regeln mich nicht retten werden. Dass die
               Veränderung nur über den Körper gehen kann.
             </p>
             <p className="mt-5 text-sm leading-loose text-text-muted">
-              Heute ist mein Alltag so viel leiser. Nicht weil nichts passiert —
+              Heute ist mein Alltag so viel leiser. Nicht weil nichts passiert -
               sondern weil ich bei mir bleibe, wenn es passiert. Ich halte mich
               selbst. Ich kenne mich, und ich liebe, was ich kenne.
             </p>
@@ -547,7 +547,7 @@ function Index() {
             <div className="border-l-2 border-gold bg-brown-warm/50 p-10">
               <p className="text-display text-xl italic leading-snug text-cream md:text-2xl">
                 „Ich sage dir nicht, dass du anders denken musst. Ich bringe dich
-                zurück zu dir — damit du dich endlich kennenlernen, lieben und für
+                zurück zu dir - damit du dich endlich kennenlernen, lieben und für
                 dich entscheiden kannst."
               </p>
             </div>
@@ -605,7 +605,7 @@ function Index() {
           </a>
         </div>
         <p className="w-full text-[11px] text-cream/20">
-          © 2026 Souverän Sein · Heimweh — Der Weg zurück zu dir
+          © 2026 Souverän Sein · Heimweh - Der Weg zurück zu dir
         </p>
       </footer>
     </main>
