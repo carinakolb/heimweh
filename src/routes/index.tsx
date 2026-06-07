@@ -70,7 +70,7 @@ const CSS = `
 .hw .label-dark { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--light-text); font-weight:600; display:block; margin-bottom:20px; }
 
 .hw .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:0 52px 110px; background:var(--deep); position:relative; overflow:hidden; }
-.hw .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.30) 0%, rgba(26,16,8,0.38) 55%, rgba(26,16,8,0.70) 100%); z-index:0; pointer-events:none; }
+.hw .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.32) 0%, rgba(26,16,8,0.36) 60%, rgba(26,16,8,0.55) 100%); z-index:0; pointer-events:none; }
 .hw .hero-label { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:28px; opacity:0; animation:hwFadeUp 1s 0.4s forwards; }
 .hw .hero-title { font-size:clamp(72px,11vw,150px); font-weight:700; line-height:0.92; margin-bottom:36px; opacity:0; animation:hwFadeUp 1s 0.7s forwards; }
 .hw .hero-title em { font-style:italic; color:var(--gold-l); display:block; }
