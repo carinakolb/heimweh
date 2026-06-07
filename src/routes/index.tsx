@@ -789,6 +789,13 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Ich will das auch.</a>
 </div>
 
+<div class="image-band">
+  <p class="image-band-text reveal">
+    Zurück zu dem Ort, an dem du wieder <em>atmen</em> kannst.<br>
+    Dorthin, wo du dir selbst begegnest.
+  </p>
+</div>
+
 <section>
   <div class="after">
     <p class="section-label reveal">Nach der Begleitung</p>
@@ -895,6 +902,9 @@ const BODY_HTML = `
           <p class="quote-block-text">
             "Ich sage dir nicht, dass du anders denken musst. Ich bringe dich zurück in deinen Körper. Damit du in einem sicheren Raum üben kannst, wie es sich anfühlt, nein zu sagen, wie ein verkörpertes Nein sich anfühlt."
           </p>
+        </div>
+        <div class="carina-portrait-wrap reveal reveal-delay-1" style="margin: 36px 0 24px;">
+          <img class="carina-portrait" src="${portraitImg}" alt="Carina, Somatic Coach" />
         </div>
         <p class="quote-small reveal reveal-delay-1">
           "Durch diesen Raum wirst du zur Verkörperung von Selbstliebe, von Souveränität dir selbst gegenüber, von purer Stärke."
