@@ -986,6 +986,15 @@ const BODY_HTML = `
   </div>
 </section>
 
+<div class="desire reveal">
+  <p class="desire-label">Heimkommen</p>
+  <p class="desire-text">
+    Zurück zu der Frau, die du warst, bevor du gelernt hast leise zu sein.<br>
+    <strong>Souverän. Weich. Ganz.</strong><br>
+    Mit dem Funkeln in den Augen, das niemand mehr übersehen kann.
+  </p>
+</div>
+
 <section class="final">
   <div class="final-inner">
     <p class="section-label reveal">Du bist bereit</p>
