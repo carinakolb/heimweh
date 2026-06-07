@@ -754,6 +754,15 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Dann lass uns anfangen.</a>
 </div>
 
+<div class="desire reveal">
+  <p class="desire-label">Stell dir vor</p>
+  <p class="desire-text">
+    Du wachst auf und spürst dich. <strong>Ruhig. Klar. Wach.</strong><br>
+    Kein Druck in der Brust. Kein Funktionieren-Müssen.<br>
+    Nur du, in deinem Körper, zuhause.
+  </p>
+</div>
+
 <section class="warum">
   <div class="warum-inner">
     <p class="section-label reveal">Die Wahrheit</p>
