@@ -751,7 +751,6 @@ function Index() {
             <span className="carina-sig reveal">Carina</span>
             <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8, letterSpacing: "0.1em" }} className="reveal">Somatic Coach · Core Emotional Bodywork · Zürich</p>
           </div>
-          <img src={portraitImg} alt="Carina" className="carina-portrait reveal" />
         </div>
       </section>
 
