@@ -471,9 +471,11 @@ function Index() {
       </section>
 
       {/* CTA BAR 1 */}
-      <div className="cta-bar">
-        <p className="cta-bar-text reveal">Und dann passiert es. Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d1">Dahin will ich</a>
+      <div className="cta-bar cta-bar-illum">
+        <span className="illum-eyebrow reveal">Und dann</span>
+        <h2 className="illum-head reveal d1"><span className="gold">passiert</span> es.</h2>
+        <p className="illum-body reveal d2">Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
+        <a href="#anfragen" className="btn btn-gold reveal d3">Dahin will ich</a>
       </div>
 
       {/* REFRAME */}
