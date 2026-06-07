@@ -364,7 +364,7 @@ function Index() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" style={{ backgroundImage: `url(${bridgeImg})` }} />
+        <div className="hero-bg" style={{ backgroundImage: `url(${natureImg})` }} />
         <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
@@ -441,7 +441,7 @@ function Index() {
       </section>
 
       {/* IMG BAND 1 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
+      <div className="img-band reveal" style={{ backgroundImage: `url(${bridgeImg})` }} />
 
       {/* FÜR WEN */}
       <section className="fuerwen">
