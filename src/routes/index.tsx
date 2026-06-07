@@ -138,7 +138,7 @@ const CSS = `
 .hw .desire-desc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(17px,1.9vw,21px); color:var(--body); line-height:1.8; }
 .hw .desire-desc em { color:var(--gold-l); font-style:normal; }
 
-.hw .methode { padding:120px 52px; max-width:900px; margin:0 auto; }
+.hw .methode { padding:120px 52px 40px; max-width:900px; margin:0 auto; }
 .hw .methode-title { font-family:'Cormorant Garamond',serif; font-size:clamp(34px,4.5vw,60px); font-weight:700; line-height:1.1; margin-bottom:24px; }
 .hw .methode-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(18px,2vw,24px); color:var(--body); line-height:1.7; max-width:680px; margin-bottom:72px; }
 .hw .methode-carina { background:rgba(44,26,14,0.5); border-left:2px solid var(--gold); padding:48px 52px; margin-bottom:72px; }
