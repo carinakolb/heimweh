@@ -209,7 +209,7 @@ const CSS = `
 .hw .price-note { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:var(--muted); margin-bottom:48px; }
 
 .hw .carina { padding:120px 52px; background:linear-gradient(to bottom,var(--deep),rgba(44,26,14,0.4),var(--deep)); }
-.hw .carina-inner { max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 280px; gap:64px; align-items:start; }
+.hw .carina-inner { max-width:900px; margin:0 auto; display:block; }
 .hw .carina-text-col {}
 .hw .carina-portrait { width:100%; aspect-ratio:4/5; object-fit:cover; filter:sepia(0.1) brightness(0.95); }
 .hw .carina-title { font-size:clamp(34px,4vw,56px); line-height:1.05; margin-bottom:32px; }
@@ -581,7 +581,7 @@ function Index() {
       </section>
 
       {/* IMG BAND 2 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${bridgeImg})` }} />
+      <div className="img-band reveal" style={{ backgroundImage: `url(${portraitImg})` }} />
 
       {/* TRANSFORMATION */}
       <section className="transformation">
@@ -751,7 +751,6 @@ function Index() {
             <span className="carina-sig reveal">Carina</span>
             <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8, letterSpacing: "0.1em" }} className="reveal">Somatic Coach · Core Emotional Bodywork · Zürich</p>
           </div>
-          <img src={portraitImg} alt="Carina" className="carina-portrait reveal" />
         </div>
       </section>
 
