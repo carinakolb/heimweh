@@ -137,27 +137,27 @@ function Index() {
         <div className="mt-14 grid gap-px bg-cream/10 md:grid-cols-2">
           {[
             {
-              t: "„Ich funktioniere. Ich liefere. Ich bin für alle da."",
+              t: "„Ich funktioniere. Ich liefere. Ich bin für alle da.",
               b: "Und abends, wenn es still wird — dieser Druck in der Brust. Diese Leere, die keine Erklärung hat. Du hast alles getan. Und trotzdem fühlt sich irgendetwas falsch an.",
             },
             {
-              t: "„Ich bin so müde. Aber aufhören kann ich nicht."",
+              t: "„Ich bin so müde. Aber aufhören kann ich nicht.",
               b: "Nicht weil du schwach bist. Sondern weil du dir nie erlaubt hast aufzuhören. Weil Pause bedeuten würde: Vielleicht bin ich nicht genug, wenn ich nur bin.",
             },
             {
-              t: "„Ich weiss nicht mehr, was ich wirklich will."",
+              t: "„Ich weiss nicht mehr, was ich wirklich will.",
               b: "Du weisst, was alle anderen wollen. Du spürst, was der Raum braucht, bevor jemand es ausspricht. Aber wann hast du zuletzt gespürt, was du willst — ohne sofort zu prüfen, ob das auch okay ist?",
             },
             {
-              t: "„Allein zu sein macht mir Angst."",
+              t: "„Allein zu sein macht mir Angst.",
               b: "Nicht Einsamkeit. Sondern die Stille mit dir selbst. Wenn du aufhörst dich abzulenken, kommt alles auf einmal. Die Gedanken, die Stimmen, das Gefühl: Ich kenne mich selbst nicht mehr.",
             },
             {
-              t: "„Ich sage Ja — und meine Nein."",
+              t: "„Ich sage Ja — und meine Nein.",
               b: "Und hasse mich danach dafür. Du siehst dich von aussen zu, wie du wieder einspringst, wieder hältst, wieder lächelst. Während ein Teil in dir leise schreit: Bitte nicht schon wieder.",
             },
             {
-              t: "„Der innere Kritiker ist lauter als alles andere."",
+              t: "„Der innere Kritiker ist lauter als alles andere.",
               b: "Egal was du machst, es ist nie genug. Du bist nie genug. Eine Stimme, die schon so lange in dir wohnt, dass du sie für dich selbst hältst — aber sie ist nicht du.",
             },
           ].map((c, i) => (
@@ -247,28 +247,28 @@ function Index() {
         <div className="mt-20 grid gap-6 md:grid-cols-3">
           {[
             {
-              before: "„Ich brauche ständig Bestätigung, dass ich okay bin."",
+              before: "„Ich brauche ständig Bestätigung, dass ich okay bin.",
               after: "Du trägst deine eigene Stabilität. Niemand muss dich mehr regulieren.",
             },
             {
-              before: "„Ich sage Ja, obwohl ich Nein meine."",
+              before: "„Ich sage Ja, obwohl ich Nein meine.",
               after: "Du sagst Nein — und dein Körper entspannt sich dabei.",
             },
             {
-              before: "„Allein zu sein fühlt sich wie Strafe an."",
+              before: "„Allein zu sein fühlt sich wie Strafe an.",
               after: "Allein sein ist der schönste Moment mit dir selbst.",
             },
             {
-              before: "„Ich funktioniere. Aber ich spüre mich nicht."",
+              before: "„Ich funktioniere. Aber ich spüre mich nicht.",
               after: "Du spürst dich wieder. Du weisst, was du willst. Du vertraust dir.",
             },
             {
-              before: "„Der innere Kritiker ist lauter als alles andere."",
+              before: "„Der innere Kritiker ist lauter als alles andere.",
               after: "Deine inneren Stimmen arbeiten für dich — nicht gegen dich.",
             },
             {
               before:
-                "„Ich weiss nicht, wer ich bin, wenn ich nicht gebraucht werde."",
+                "„Ich weiss nicht, wer ich bin, wenn ich nicht gebraucht werde.",
               after:
                 "Du bist vollkommen richtig, wie du bist. Das weisst du jetzt im Körper.",
             },
@@ -470,7 +470,7 @@ function Index() {
           {[
             "Der Moment im Auto, kurz bevor du die Haustüre öffnest. Wenn du noch eine Sekunde lang du selbst bist — bevor du wieder zu der wirst, die alle brauchen.",
             "Der Moment in der Dusche, wenn das Wasser läuft und du weinst, ohne zu wissen warum. Und dann gehst du raus, ziehst dich an, und funktionierst weiter.",
-            "Der Moment, in dem jemand fragt „Wie geht's dir?" und du automatisch „Gut, danke" sagst — und beide wissen, dass das nicht stimmt.",
+            "Der Moment, in dem jemand fragt „Wie geht's dir?” und du automatisch „Gut, danke” sagst — und beide wissen, dass das nicht stimmt.",
             "Der Moment, wenn du Sonntagabends auf dem Sofa sitzt und denkst: Ist das alles? Und gleich darauf: Sei nicht undankbar.",
             "Der Moment, in dem du dich im Spiegel ansiehst und eine Frau siehst, die du nicht mehr kennst.",
           ].map((m, i) => (
