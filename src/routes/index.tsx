@@ -581,7 +581,7 @@ function Index() {
       </section>
 
       {/* IMG BAND 2 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${bridgeImg})` }} />
+      <div className="img-band reveal" style={{ backgroundImage: `url(${portraitImg})` }} />
 
       {/* TRANSFORMATION */}
       <section className="transformation">
