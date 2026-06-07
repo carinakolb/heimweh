@@ -1,7 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-heimweh.jpg";
+import heroAsset from "@/assets/carina-bridge.jpeg.asset.json";
+import portraitAsset from "@/assets/carina-portrait.jpeg.asset.json";
+import natureAsset from "@/assets/carina-nature.jpeg.asset.json";
 import embodimentImg from "@/assets/embodiment.jpg";
-import stillifeImg from "@/assets/stillife.jpg";
+const heroImg = heroAsset.url;
+const portraitImg = portraitAsset.url;
+const natureImg = natureAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -525,12 +529,20 @@ function Index() {
 
           <div className="space-y-8">
             <img
-              src={stillifeImg}
-              alt="Pampasgras und Kerze im Fensterlicht"
+              src={portraitImg}
+              alt="Carina im Profil, Augen geschlossen, Sonnenlicht"
               width={1280}
-              height={1024}
+              height={1920}
               loading="lazy"
-              className="aspect-[5/4] w-full object-cover grayscale-[15%]"
+              className="aspect-[4/5] w-full object-cover"
+            />
+            <img
+              src={natureImg}
+              alt="Carina in der Natur"
+              width={1280}
+              height={1920}
+              loading="lazy"
+              className="aspect-[5/4] w-full object-cover"
             />
             <div className="border-l-2 border-gold bg-brown-warm/50 p-10">
               <p className="text-display text-xl italic leading-snug text-cream md:text-2xl">
