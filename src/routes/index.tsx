@@ -936,6 +936,15 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Ich will diese Ruhe.</a>
 </div>
 
+<div class="desire reveal">
+  <p class="desire-label">Und dann</p>
+  <p class="desire-text">
+    Nein sagen, ohne dich zu erklären.<br>
+    <strong>Raum einnehmen,</strong> ohne dich zu entschuldigen.<br>
+    Da sein dürfen, auch wenn du gerade nichts gibst.
+  </p>
+</div>
+
 <section>
   <div class="carina">
     <div class="carina-inner">
