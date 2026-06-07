@@ -97,7 +97,7 @@ const CSS = `
 .hw .spiegel-situation { font-family:'Cormorant Garamond',serif; font-size:clamp(17px,1.9vw,22px); color:var(--body); line-height:1.8; margin-bottom:24px; }
 .hw .spiegel-eigentlich { font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.1vw,26px); font-weight:600; color:var(--cream); line-height:1.5; padding-left:28px; border-left:2px solid var(--gold); }
 .hw .spiegel-eigentlich em { color:var(--gold-l); font-style:italic; }
-.hw .spiegel-punch { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,54px); font-weight:700; line-height:1.2; color:var(--cream); margin-top:80px; padding-top:80px; border-top:1px solid rgba(201,169,110,0.15); }
+.hw .spiegel-punch { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,54px); font-weight:700; line-height:1.2; color:var(--cream); margin-top:80px; padding-top:80px; }
 .hw .spiegel-punch em { color:var(--gold-l); font-style:italic; }
 
 .hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center; position:relative; opacity:0.75; }
