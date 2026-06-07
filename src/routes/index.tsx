@@ -115,6 +115,16 @@ const CSS = `
 .hw .cta-bar { padding:48px 52px; background:var(--mid); display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap; }
 .hw .cta-bar-text { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,2.8vw,38px); font-style:italic; color:var(--cream); max-width:640px; line-height:1.35; }
 
+.hw .cta-bar-illum { position:relative; flex-direction:column; align-items:center; text-align:center; padding:110px 52px; gap:34px; background:radial-gradient(ellipse at center top, rgba(201,169,110,0.22), transparent 65%), var(--mid); overflow:hidden; justify-content:center; }
+.hw .cta-bar-illum::before { content:''; position:absolute; top:-40%; left:50%; width:120%; height:120%; transform:translateX(-50%); background:radial-gradient(circle, rgba(224,196,138,0.16) 0%, transparent 55%); pointer-events:none; }
+.hw .cta-bar-illum::after { content:''; position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:min(560px,70%); height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hw .illum-eyebrow { position:relative; font-family:'Poppins',sans-serif; font-size:10px; letter-spacing:0.55em; text-transform:uppercase; color:var(--gold); opacity:0.9; display:flex; align-items:center; gap:18px; }
+.hw .illum-eyebrow::before, .hw .illum-eyebrow::after { content:''; width:36px; height:1px; background:var(--gold); opacity:0.55; }
+.hw .illum-head { position:relative; font-family:'Cormorant Garamond',serif; font-weight:400; font-style:italic; font-size:clamp(44px,7vw,92px); line-height:1.02; letter-spacing:-0.01em; color:var(--cream); max-width:none; }
+.hw .illum-head .gold { background:linear-gradient(180deg, var(--gold-l) 0%, var(--gold) 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hw .illum-body { position:relative; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(19px,2vw,24px); line-height:1.55; color:var(--body); max-width:640px; }
+@media (max-width: 720px) { .hw .cta-bar-illum { padding:80px 24px; } .hw .illum-eyebrow::before, .hw .illum-eyebrow::after { width:20px; } }
+
 .hw .reframe { padding:120px 52px 70px; max-width:900px; margin:0 auto; }
 .hw .reframe-big { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,4.5vw,62px); font-weight:700; line-height:1.1; color:var(--cream); margin-bottom:48px; }
 .hw .reframe-big em { color:var(--gold-l); font-style:italic; }
@@ -461,9 +471,11 @@ function Index() {
       </section>
 
       {/* CTA BAR 1 */}
-      <div className="cta-bar">
-        <p className="cta-bar-text reveal">Und dann passiert es. Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d1">Dahin will ich</a>
+      <div className="cta-bar cta-bar-illum">
+        <span className="illum-eyebrow reveal">Und dann</span>
+        <h2 className="illum-head reveal d1"><span className="gold">passiert</span> es.</h2>
+        <p className="illum-body reveal d2">Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
+        <a href="#anfragen" className="btn btn-gold reveal d3">Dahin will ich</a>
       </div>
 
       {/* REFRAME */}
