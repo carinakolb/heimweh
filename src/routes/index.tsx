@@ -427,7 +427,7 @@ function Index() {
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du hast viel gelesen, viel reflektiert, viel verstanden. Du weisst auf der kognitiven Ebene genau, was los ist. Und trotzdem: In echten Momenten übernimmt der Körper alte Muster. Du weisst, was gesund wäre — und tust trotzdem das Gegenteil.
+              Du hast viel gelesen, viel reflektiert, viel verstanden. Du weisst auf der kognitiven Ebene genau, was los ist. Und trotzdem: In echten Momenten übernimmt der Körper alte Muster. Du weisst, was gesund wäre, und tust trotzdem das Gegenteil.
             </p>
             <p className="spiegel-eigentlich">
               Eigentlich weisst du, dass noch mehr Wissen nichts ändert. Was fehlt ist nicht Erkenntnis. Was fehlt ist, <em>dass dein Körper es endlich verstehen darf.</em>
@@ -546,7 +546,7 @@ function Index() {
             <div className="methode-step">
               <div className="methode-step-num">01</div>
               <h3 className="methode-step-title">Ankommen</h3>
-              <p className="methode-step-body">Dein Nervensystem bekommt Raum sich zu zeigen. Die Stimme, die so viel unterdrückt wurde, darf laut sein. In einem wertungsfreien Raum — ohne funktionieren zu müssen.</p>
+              <p className="methode-step-body">Dein Nervensystem bekommt Raum sich zu zeigen. Die Stimme, die so viel unterdrückt wurde, darf laut sein. In einem wertungsfreien Raum, ohne funktionieren zu müssen.</p>
             </div>
             <div className="methode-step">
               <div className="methode-step-num">02</div>
@@ -680,7 +680,7 @@ function Index() {
 
       {/* CTA BAR 3 */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen — sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
+        <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
         <a href="#anfragen" className="btn btn-gold reveal d1">Ja. Ich wähle mich.</a>
       </div>
 
@@ -692,7 +692,7 @@ function Index() {
             HEIMWEH<br />
             <em>ist meine Begleitung für dich.</em>
           </h2>
-          <p className="angebot-sub reveal d2">Für Frauen, die nicht länger nur funktionieren wollen — sondern wieder spüren möchten, wer sie sind.</p>
+          <p className="angebot-sub reveal d2">Für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind.</p>
 
           <div className="angebot-box reveal">
             <span className="angebot-box-label">Was enthalten ist</span>
@@ -701,7 +701,7 @@ function Index() {
                 <span className="angebot-item-num">3x</span>
                 <div>
                   <p className="angebot-item-title">1:1 Session live, je ca. 2 Stunden</p>
-                  <p className="angebot-item-body">In Zürich, Pfingstweidstrasse 31. Körperorientierte Tiefenarbeit mit Core Emotional Bodywork. Kein reines Gespräch — echter Prozess, der sich im Nervensystem speichert.</p>
+                  <p className="angebot-item-body">In Zürich, Pfingstweidstrasse 31. Körperorientierte Tiefenarbeit mit Core Emotional Bodywork. Kein reines Gespräch, echter Prozess, der sich im Nervensystem speichert.</p>
                 </div>
               </div>
               <div className="angebot-item">
@@ -741,11 +741,11 @@ function Index() {
             <span className="label reveal">Wer ich bin</span>
             <h2 className="carina-title reveal d1">Ich kenne dieses Gefühl.</h2>
             <p className="carina-italic reveal d2">Dieses ständige Scannen. Dieses innerliche Zusammenzucken, wenn jemand enttäuscht ist. Dieses Leise-Werden, obwohl innen alles schreit.</p>
-            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden — aus der Erfahrung, dass es nicht reicht zu wissen, was gesund wäre. Wir müssen es im Körper wieder sicher machen, uns selbst zu wählen.</p>
+            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden, aus der Erfahrung, dass es nicht reicht zu wissen, was gesund wäre. Wir müssen es im Körper wieder sicher machen, uns selbst zu wählen.</p>
             <p className="carina-regular reveal">Heute halte ich Räume für Frauen, die nicht mehr "unkompliziert" sein wollen, wenn unkompliziert bedeutet, sich selbst zu verlieren.</p>
 
             <div className="carina-kompetenz reveal">
-              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. In meinem Raum musst du nichts leisten, nichts beweisen und nichts richtig machen. Meine Arbeit verbindet emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung — nicht als Konzept, sondern als Erfahrung im Körper.</p>
+              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. In meinem Raum musst du nichts leisten, nichts beweisen und nichts richtig machen. Meine Arbeit verbindet emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung, nicht als Konzept, sondern als Erfahrung im Körper.</p>
             </div>
 
             <p className="carina-regular reveal">Ich setze an, bevor es andere tun. Dann wenn du weisst, dass du etwas ändern musst, und noch die Kraft hast, es zu tun.</p>
@@ -763,7 +763,7 @@ function Index() {
           {[
             ["Ist HEIMWEH richtig für mich, wenn ich schon viel reflektiert habe?", "Ja. Gerade dann. HEIMWEH ist für Frauen, die viel verstehen, aber merken, dass ihr Körper in echten Situationen trotzdem alte Schutzmuster übernimmt. Du brauchst nicht mehr Wissen. Du brauchst eine andere Ebene der Veränderung."],
             ["Was, wenn ich Angst habe, dadurch Menschen zu verlieren?", "Dann bist du genau an einem wichtigen Punkt. HEIMWEH geht nicht darum, kalt zu werden. Es geht darum, Nähe nicht mehr mit Selbstverlust zu bezahlen. Du wirst nicht hart. Du wirst sicherer in dir."],
-            ["Was passiert in einer Session?", "Wir arbeiten mit deinem Körper, deinen Emotionen, deiner inneren Stimme und den Momenten, in denen du dich selbst verlässt. Es ist kein reines Gespräch, sondern ein gehaltener Prozess — langsam, achtsam, tief."],
+            ["Was passiert in einer Session?", "Wir arbeiten mit deinem Körper, deinen Emotionen, deiner inneren Stimme und den Momenten, in denen du dich selbst verlässt. Es ist kein reines Gespräch, sondern ein gehaltener Prozess, langsam, achtsam, tief."],
             ["Muss ich schon Erfahrung mit Körperarbeit haben?", "Nein. Du wirst achtsam begleitet. Alles darf langsam gehen. Mein Raum ist so gestaltet, dass du nichts \"richtig\" machen musst."],
             ["Ist HEIMWEH Therapie?", "Nein. HEIMWEH ersetzt keine Psychotherapie. Es ist eine körperorientierte Begleitung für Selbstverbindung, emotionale Regulation und verkörperte Grenzen."],
             ["Kann ich in Raten zahlen?", "Ja, Ratenzahlung ist auf Anfrage möglich. Schreib mir einfach eine Nachricht."],
