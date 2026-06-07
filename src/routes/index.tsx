@@ -1,5 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
+import bridgeAsset from "@/assets/carina-bridge.jpeg.asset.json";
+import portraitAsset from "@/assets/carina-portrait.jpeg.asset.json";
+import natureAsset from "@/assets/carina-nature.jpeg.asset.json";
+
+const heroImg = bridgeAsset.url;
+const portraitImg = portraitAsset.url;
+const natureImg = natureAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -135,9 +142,67 @@ const CSS = `
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 48px 100px;
-  background: radial-gradient(ellipse at 20% 70%, rgba(61,37,16,0.65) 0%, transparent 55%), var(--brown-deep);
+  background:
+    linear-gradient(to top, var(--brown-deep) 0%, rgba(26,16,8,0.55) 45%, rgba(26,16,8,0.35) 100%),
+    url("${heroImg}") center 30% / cover no-repeat,
+    var(--brown-deep);
   position: relative;
   overflow: hidden;
+}
+.heimweh-page .hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 70%, rgba(61,37,16,0.55) 0%, transparent 55%);
+  pointer-events: none;
+}
+.heimweh-page .hero > * { position: relative; z-index: 2; }
+
+.heimweh-page .image-band {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  background-image:
+    linear-gradient(to bottom, rgba(26,16,8,0.55), rgba(26,16,8,0.35) 50%, rgba(26,16,8,0.75)),
+    url("${natureImg}");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 48px;
+  text-align: center;
+}
+.heimweh-page .image-band-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(24px, 3.4vw, 44px);
+  color: var(--cream);
+  max-width: 720px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+.heimweh-page .image-band-text em { color: var(--gold-light); font-style: italic; }
+
+.heimweh-page .carina-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95) contrast(1.02);
+  box-shadow: 0 30px 80px -30px rgba(0,0,0,0.7);
+}
+.heimweh-page .carina-portrait-wrap {
+  position: relative;
+}
+.heimweh-page .carina-portrait-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 1px solid var(--gold);
+  opacity: 0.6;
+  pointer-events: none;
 }
 .heimweh-page .hero-eyebrow {
   font-size: 11px;
@@ -580,6 +645,7 @@ const CSS = `
   .heimweh-page .furwen-right { padding-top: 0; }
   .heimweh-page .btn-outline { margin-left: 0; margin-top: 16px; display: block; }
   .heimweh-page footer { padding: 40px 24px; }
+  .heimweh-page .image-band { height: 50vh; min-height: 320px; padding: 0 24px; }
 }
 `;
 
@@ -723,6 +789,13 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Ich will das auch.</a>
 </div>
 
+<div class="image-band">
+  <p class="image-band-text reveal">
+    Zurück zu dem Ort, an dem du wieder <em>atmen</em> kannst.<br>
+    Dorthin, wo du dir selbst begegnest.
+  </p>
+</div>
+
 <section>
   <div class="after">
     <p class="section-label reveal">Nach der Begleitung</p>
@@ -829,6 +902,9 @@ const BODY_HTML = `
           <p class="quote-block-text">
             "Ich sage dir nicht, dass du anders denken musst. Ich bringe dich zurück in deinen Körper. Damit du in einem sicheren Raum üben kannst, wie es sich anfühlt, nein zu sagen, wie ein verkörpertes Nein sich anfühlt."
           </p>
+        </div>
+        <div class="carina-portrait-wrap reveal reveal-delay-1" style="margin: 36px 0 24px;">
+          <img class="carina-portrait" src="${portraitImg}" alt="Carina, Somatic Coach" />
         </div>
         <p class="quote-small reveal reveal-delay-1">
           "Durch diesen Raum wirst du zur Verkörperung von Selbstliebe, von Souveränität dir selbst gegenüber, von purer Stärke."
