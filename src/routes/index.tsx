@@ -371,10 +371,6 @@ function Index() {
         <p className="hero-sub">
           Raus aus People Pleasing, tschüss innerer Kritiker und willkommen im Leben für dich und mit dir.
         </p>
-        <div className="hero-btns">
-          <a href="#kennst" className="btn btn-gold">Ich will zurück zu mir</a>
-          <a href="#anfragen" className="btn btn-outline">Buche einen Vibecall</a>
-        </div>
       </section>
 
       {/* CLARITY BAR */}
