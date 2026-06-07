@@ -85,7 +85,7 @@ const CSS = `
 
 .hw .clarity-bar { background:var(--mid); padding:72px 52px; display:flex; flex-direction:column; gap:28px; border-top:1px solid rgba(201,169,110,0.15); }
 .hw .clarity-bar-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
-.hw .clarity-bar-text { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(17px,1.9vw,22px); color:var(--body); line-height:1.8; max-width:740px; }
+.hw .clarity-bar-text { font-family:'Cormorant Garamond',serif; font-size:clamp(18px,2vw,24px); color:var(--body); line-height:1.75; max-width:740px; }
 
 .hw .spiegel { padding:140px 52px; max-width:900px; margin:0 auto; }
 .hw .spiegel-opener { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5.5vw,72px); font-weight:700; line-height:1.05; margin-bottom:80px; }
@@ -379,7 +379,6 @@ function Index() {
 
       {/* CLARITY BAR */}
       <div className="clarity-bar">
-        <span className="clarity-bar-label">Was ist HEIMWEH</span>
         <p className="clarity-bar-text">
           Für Frauen, die müde sind, sich selbst zu verlassen, nur damit andere bleiben. Die im Leisten, im Anpassen, im immer-für-alle-da-sein so viel von sich gegeben haben, dass sie irgendwann vergessen haben, wer sie ohne das alles sind.
         </p>
