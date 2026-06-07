@@ -83,12 +83,9 @@ const CSS = `
 .hw .hero-bg { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; object-fit:cover; object-position:center top; opacity:1; z-index:0 !important; }
 .hw .hero > *:not(.hero-bg) { position:relative; z-index:1; }
 
-.hw .clarity-bar { background:var(--mid); padding:40px 52px; display:flex; gap:52px; flex-wrap:wrap; align-items:center; border-top:1px solid rgba(201,169,110,0.15); }
-.hw .clarity-bar-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); flex-shrink:0; }
-.hw .clarity-items { display:flex; gap:40px; flex-wrap:wrap; }
-.hw .clarity-item { display:flex; align-items:center; gap:12px; }
-.hw .clarity-dot { width:4px; height:4px; border-radius:50%; background:var(--gold); flex-shrink:0; }
-.hw .clarity-text { font-size:13px; color:var(--body); }
+.hw .clarity-bar { background:var(--mid); padding:72px 52px; display:flex; flex-direction:column; gap:28px; border-top:1px solid rgba(201,169,110,0.15); }
+.hw .clarity-bar-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
+.hw .clarity-bar-text { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(17px,1.9vw,22px); color:var(--body); line-height:1.8; max-width:740px; }
 
 .hw .spiegel { padding:140px 52px; max-width:900px; margin:0 auto; }
 .hw .spiegel-opener { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,5.5vw,72px); font-weight:700; line-height:1.05; margin-bottom:80px; }
@@ -383,12 +380,12 @@ function Index() {
       {/* CLARITY BAR */}
       <div className="clarity-bar">
         <span className="clarity-bar-label">Was ist HEIMWEH</span>
-        <div className="clarity-items">
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">3 x 1:1 Session live (je ca. 2h)</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">Core Emotional Bodywork</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">2 Embodiment-Aufnahmen</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">WhatsApp-Begleitung</span></div>
-        </div>
+        <p className="clarity-bar-text">
+          Für Frauen, die müde sind, sich selbst zu verlassen, nur damit andere bleiben. Die im Leisten, im Anpassen, im immer-für-alle-da-sein so viel von sich gegeben haben, dass sie irgendwann vergessen haben, wer sie ohne das alles sind.
+        </p>
+        <p className="clarity-bar-text">
+          Hier findest du den Weg zurück. Nicht durch Willenskraft. Nicht durch noch mehr Disziplin. Sondern durch deinen Körper — den einzigen Ort, von dem Veränderung wirklich ausgeht.
+        </p>
       </div>
 
       {/* SCHMERZ-SPIEGEL */}
