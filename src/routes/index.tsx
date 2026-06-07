@@ -100,7 +100,7 @@ const CSS = `
 .hw .spiegel-punch { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,54px); font-weight:700; line-height:1.2; color:var(--cream); margin-top:80px; padding-top:80px; border-top:1px solid rgba(201,169,110,0.15); }
 .hw .spiegel-punch em { color:var(--gold-l); font-style:italic; }
 
-.hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center; position:relative; opacity:0.75; }
+.hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center top; position:relative; opacity:0.75; }
 .hw .img-band::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.65), rgba(26,16,8,0.8)); }
 
 .hw .fuerwen { background:var(--light-bg); padding:100px 52px 60px; }
@@ -364,7 +364,7 @@ function Index() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" style={{ backgroundImage: `url(${bridgeImg})` }} />
+        <div className="hero-bg" style={{ backgroundImage: `url(${natureImg})` }} />
         <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
@@ -441,7 +441,7 @@ function Index() {
       </section>
 
       {/* IMG BAND 1 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
+      <div className="img-band reveal" style={{ backgroundImage: `url(${bridgeImg})` }} />
 
       {/* FÜR WEN */}
       <section className="fuerwen">
