@@ -63,25 +63,45 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --radius: 0.25rem;
+  /* Boho earthy palette — warm cream, sage, moss, terracotta, mustard */
+  --background: oklch(0.965 0.018 85);          /* warm cream */
+  --foreground: oklch(0.28 0.035 60);            /* deep walnut */
+  --card: oklch(0.945 0.022 80);
+  --card-foreground: oklch(0.28 0.035 60);
+  --popover: oklch(0.965 0.018 85);
+  --popover-foreground: oklch(0.28 0.035 60);
+  --primary: oklch(0.42 0.055 145);              /* deep moss green */
+  --primary-foreground: oklch(0.97 0.02 85);
+  --secondary: oklch(0.88 0.04 80);              /* sand beige */
+  --secondary-foreground: oklch(0.32 0.04 60);
+  --muted: oklch(0.91 0.025 80);
+  --muted-foreground: oklch(0.45 0.03 60);
+  --accent: oklch(0.72 0.13 65);                 /* mustard */
+  --accent-foreground: oklch(0.22 0.03 60);
+  --destructive: oklch(0.5 0.16 30);             /* terracotta */
+  --destructive-foreground: oklch(0.97 0.02 85);
+  --border: oklch(0.84 0.025 75);
+  --input: oklch(0.88 0.025 75);
+  --ring: oklch(0.55 0.08 130);
+
+  --sage: oklch(0.72 0.05 140);
+  --moss: oklch(0.42 0.055 145);
+  --forest: oklch(0.32 0.045 150);
+  --terracotta: oklch(0.55 0.14 35);
+  --clay: oklch(0.62 0.1 50);
+  --mustard: oklch(0.72 0.13 65);
+  --cream: oklch(0.965 0.018 85);
+  --sand: oklch(0.88 0.04 80);
+  --walnut: oklch(0.28 0.035 60);
+
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-body: "Karla", ui-sans-serif, system-ui, sans-serif;
+
+  --gradient-earth: linear-gradient(180deg, oklch(0.965 0.018 85) 0%, oklch(0.92 0.03 80) 100%);
+  --gradient-moss: linear-gradient(135deg, oklch(0.42 0.055 145), oklch(0.32 0.045 150));
+  --shadow-soft: 0 20px 60px -20px oklch(0.32 0.04 60 / 0.18);
+  --shadow-warm: 0 10px 40px -15px oklch(0.55 0.14 35 / 0.25);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
