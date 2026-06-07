@@ -840,6 +840,15 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Ich will das auch.</a>
 </div>
 
+<div class="desire reveal">
+  <p class="desire-label">Das wartet auf dich</p>
+  <p class="desire-text">
+    Lebendigkeit, die wieder durch dich fliesst.<br>
+    <strong>Lust am Leben.</strong> Lust an dir.<br>
+    Ein Körper, der nicht mehr gegen dich kämpft, sondern für dich da ist.
+  </p>
+</div>
+
 <div class="image-band">
   <p class="image-band-text reveal">
     Zurück zu dem Ort, an dem du wieder <em>atmen</em> kannst.<br>
