@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const BUY_URL = "#buchen";
+const BUY_URL = "https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/";
 
 function CTA({
   children = "Ja. Ich will nach Hause.",
@@ -42,7 +42,12 @@ function CTA({
       ? "bg-gold text-brown-deep hover:bg-gold-light hover:-translate-y-0.5 shadow-warm"
       : "border border-cream/30 text-cream hover:border-gold hover:text-gold";
   return (
-    <a href={BUY_URL} className={`${base} ${styles} ${className}`}>
+    <a
+      href={BUY_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${base} ${styles} ${className}`}
+    >
       {children}
     </a>
   );
