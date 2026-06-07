@@ -79,7 +79,7 @@ const CSS = `
 .hw .hero-scroll { position:absolute; bottom:48px; right:52px; display:flex; flex-direction:column; align-items:center; gap:12px; opacity:0; animation:hwFadeIn 1s 2s forwards; }
 .hw .hero-scroll span { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); writing-mode:vertical-rl; }
 .hw .hero-scroll-line { width:1px; height:80px; background:linear-gradient(to bottom,var(--gold),transparent); animation:hwScrollPulse 2.5s infinite; }
-.hw .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0.22; z-index:0; }
+.hw .hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0.5; z-index:0; }
 .hw .hero > * { position:relative; z-index:1; }
 
 .hw .clarity-bar { background:var(--mid); padding:40px 52px; display:flex; gap:52px; flex-wrap:wrap; align-items:center; border-top:1px solid rgba(201,169,110,0.15); }
@@ -97,10 +97,10 @@ const CSS = `
 .hw .spiegel-situation { font-family:'Cormorant Garamond',serif; font-size:clamp(17px,1.9vw,22px); color:var(--body); line-height:1.8; margin-bottom:24px; }
 .hw .spiegel-eigentlich { font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.1vw,26px); font-weight:600; color:var(--cream); line-height:1.5; padding-left:28px; border-left:2px solid var(--gold); }
 .hw .spiegel-eigentlich em { color:var(--gold-l); font-style:italic; }
-.hw .spiegel-punch { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,54px); font-weight:700; line-height:1.2; color:var(--cream); margin-top:80px; padding-top:80px; border-top:1px solid rgba(201,169,110,0.15); }
+.hw .spiegel-punch { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,54px); font-weight:700; line-height:1.2; color:var(--cream); margin-top:80px; padding-top:80px; }
 .hw .spiegel-punch em { color:var(--gold-l); font-style:italic; }
 
-.hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center top; position:relative; opacity:0.75; }
+.hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center; position:relative; opacity:0.75; }
 .hw .img-band::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.65), rgba(26,16,8,0.8)); }
 
 .hw .fuerwen { background:var(--light-bg); padding:100px 52px 60px; }
@@ -364,7 +364,7 @@ function Index() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" style={{ backgroundImage: `url(${natureImg})` }} />
+        <div className="hero-bg" style={{ backgroundImage: `url(${bridgeImg})` }} />
         <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
@@ -441,7 +441,7 @@ function Index() {
       </section>
 
       {/* IMG BAND 1 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${bridgeImg})` }} />
+      <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
 
       {/* FÜR WEN */}
       <section className="fuerwen">
