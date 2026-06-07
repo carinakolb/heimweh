@@ -67,7 +67,7 @@ const CSS = `
 .hw .reveal.visible { opacity:1; transform:translateY(0); }
 .hw .d1 { transition-delay:0.15s; } .hw .d2 { transition-delay:0.3s; } .hw .d3 { transition-delay:0.45s; }
 .hw .label { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:20px; }
-.hw .label-dark { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--warm); display:block; margin-bottom:20px; }
+.hw .label-dark { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--light-text); font-weight:600; display:block; margin-bottom:20px; }
 
 .hw .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:0 52px 110px; background:radial-gradient(ellipse at 20% 70%, rgba(61,37,16,0.6) 0%, transparent 55%), var(--deep); position:relative; overflow:hidden; }
 .hw .hero-label { font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:28px; opacity:0; animation:hwFadeUp 1s 0.4s forwards; }
@@ -100,10 +100,10 @@ const CSS = `
 .hw .spiegel-punch { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,54px); font-weight:700; line-height:1.2; color:var(--cream); margin-top:80px; padding-top:80px; border-top:1px solid rgba(201,169,110,0.15); }
 .hw .spiegel-punch em { color:var(--gold-l); font-style:italic; }
 
-.hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center; position:relative; }
-.hw .img-band::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.45), rgba(26,16,8,0.65)); }
+.hw .img-band { width:100%; height:60vh; min-height:380px; background-size:cover; background-position:center; position:relative; opacity:0.75; }
+.hw .img-band::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(26,16,8,0.65), rgba(26,16,8,0.8)); }
 
-.hw .fuerwen { background:var(--light-bg); padding:100px 52px; }
+.hw .fuerwen { background:var(--light-bg); padding:100px 52px 60px; }
 .hw .fuerwen-inner { max-width:900px; margin:0 auto; }
 .hw .fuerwen-title { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,4vw,54px); font-weight:700; line-height:1.1; color:var(--light-text); margin-bottom:52px; }
 .hw .fuerwen-items { display:flex; flex-direction:column; gap:0; margin-bottom:52px; }
@@ -114,10 +114,10 @@ const CSS = `
 .hw .fuerwen-nicht { font-family:'Cormorant Garamond',serif; font-size:clamp(18px,2vw,24px); font-weight:700; color:var(--light-text); line-height:1.4; padding:40px 0 0; }
 .hw .fuerwen-nicht em { font-style:italic; color:var(--warm); }
 
-.hw .cta-bar { padding:72px 52px; background:var(--mid); display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap; }
+.hw .cta-bar { padding:48px 52px; background:var(--mid); display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap; }
 .hw .cta-bar-text { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,2.8vw,38px); font-style:italic; color:var(--cream); max-width:640px; line-height:1.35; }
 
-.hw .reframe { padding:140px 52px; max-width:900px; margin:0 auto; }
+.hw .reframe { padding:120px 52px 70px; max-width:900px; margin:0 auto; }
 .hw .reframe-big { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,4.5vw,62px); font-weight:700; line-height:1.1; color:var(--cream); margin-bottom:48px; }
 .hw .reframe-big em { color:var(--gold-l); font-style:italic; }
 .hw .reframe-body { font-family:'Cormorant Garamond',serif; font-size:clamp(18px,1.9vw,23px); font-style:italic; color:var(--body); line-height:1.8; margin-bottom:32px; max-width:740px; }
@@ -127,7 +127,7 @@ const CSS = `
 .hw .reframe-nicht-item { font-size:13px; color:var(--muted); padding-left:20px; position:relative; }
 .hw .reframe-nicht-item::before { content:'-'; position:absolute; left:0; color:var(--gold); }
 
-.hw .desire { padding:140px 52px; background:linear-gradient(to bottom,var(--deep),var(--mid),var(--deep)); }
+.hw .desire { padding:80px 52px 140px; background:linear-gradient(to bottom,var(--deep),var(--mid),var(--deep)); }
 .hw .desire-inner { max-width:900px; margin:0 auto; }
 .hw .desire-title { font-family:'Cormorant Garamond',serif; font-size:clamp(36px,4.5vw,62px); font-weight:700; line-height:1.1; color:var(--cream); margin-bottom:72px; }
 .hw .desire-title em { color:var(--gold-l); font-style:italic; }
@@ -387,7 +387,6 @@ function Index() {
           <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">Core Emotional Bodywork</span></div>
           <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">2 Embodiment-Aufnahmen</span></div>
           <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">WhatsApp-Begleitung</span></div>
-          <div className="clarity-item"><div className="clarity-dot"></div><span className="clarity-text">Zürich · CHF 1100</span></div>
         </div>
       </div>
 
