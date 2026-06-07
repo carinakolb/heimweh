@@ -632,6 +632,48 @@ const CSS = `
 @keyframes hwFadeIn { to { opacity: 1; } }
 @keyframes hwScrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
+.heimweh-page .desire {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 90px 48px;
+  text-align: center;
+  position: relative;
+}
+.heimweh-page .desire::before,
+.heimweh-page .desire::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+  margin: 0 auto 32px;
+}
+.heimweh-page .desire::after { margin: 32px auto 0; }
+.heimweh-page .desire-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.heimweh-page .desire-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.45;
+  color: var(--gold-light);
+}
+.heimweh-page .desire-text strong {
+  font-weight: 600;
+  color: var(--gold);
+  font-style: normal;
+}
+@media (max-width: 820px) {
+  .heimweh-page .desire { padding: 64px 24px; }
+}
+
 @media (max-width: 820px) {
   .heimweh-page nav { padding: 22px 24px; }
   .heimweh-page .hero { padding: 0 24px 80px; }
@@ -712,6 +754,15 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Dann lass uns anfangen.</a>
 </div>
 
+<div class="desire reveal">
+  <p class="desire-label">Stell dir vor</p>
+  <p class="desire-text">
+    Du wachst auf und spürst dich. <strong>Ruhig. Klar. Wach.</strong><br>
+    Kein Druck in der Brust. Kein Funktionieren-Müssen.<br>
+    Nur du, in deinem Körper, zuhause.
+  </p>
+</div>
+
 <section class="warum">
   <div class="warum-inner">
     <p class="section-label reveal">Die Wahrheit</p>
@@ -787,6 +838,15 @@ const BODY_HTML = `
 <div class="cta-bar">
   <p class="cta-bar-text reveal">Heute tue ich es aus der Lust heraus. Aus dem Gefühl heraus, das Leben mit mir zu leben.</p>
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Ich will das auch.</a>
+</div>
+
+<div class="desire reveal">
+  <p class="desire-label">Das wartet auf dich</p>
+  <p class="desire-text">
+    Lebendigkeit, die wieder durch dich fliesst.<br>
+    <strong>Lust am Leben.</strong> Lust an dir.<br>
+    Ein Körper, der nicht mehr gegen dich kämpft, sondern für dich da ist.
+  </p>
 </div>
 
 <div class="image-band">
@@ -876,6 +936,15 @@ const BODY_HTML = `
   <a href="#buchen" class="btn btn-gold reveal reveal-delay-1">Ich will diese Ruhe.</a>
 </div>
 
+<div class="desire reveal">
+  <p class="desire-label">Und dann</p>
+  <p class="desire-text">
+    Nein sagen, ohne dich zu erklären.<br>
+    <strong>Raum einnehmen,</strong> ohne dich zu entschuldigen.<br>
+    Da sein dürfen, auch wenn du gerade nichts gibst.
+  </p>
+</div>
+
 <section>
   <div class="carina">
     <div class="carina-inner">
@@ -916,6 +985,15 @@ const BODY_HTML = `
     </div>
   </div>
 </section>
+
+<div class="desire reveal">
+  <p class="desire-label">Heimkommen</p>
+  <p class="desire-text">
+    Zurück zu der Frau, die du warst, bevor du gelernt hast leise zu sein.<br>
+    <strong>Souverän. Weich. Ganz.</strong><br>
+    Mit dem Funkeln in den Augen, das niemand mehr übersehen kann.
+  </p>
+</div>
 
 <section class="final">
   <div class="final-inner">
