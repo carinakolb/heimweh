@@ -363,8 +363,7 @@ function Index() {
       </nav>
 
       {/* HERO */}
-      <section className="hero">
-        <img src={bridgeImg} alt="" className="hero-bg" />
+      <section className="hero" style={{ ['--hero-bg-image' as any]: `url(${bridgeImg})` }}>
         <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
