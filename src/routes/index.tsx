@@ -231,7 +231,7 @@ const CSS = `
 .hw .final { padding:180px 52px; text-align:center; background:radial-gradient(ellipse at center,rgba(61,37,16,0.75) 0%,var(--deep) 65%); position:relative; overflow:hidden; }
 .hw .final::before { content:'HEIMWEH'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:'Cormorant Garamond',serif; font-size:clamp(80px,18vw,280px); font-weight:700; color:rgba(201,169,110,0.03); white-space:nowrap; pointer-events:none; letter-spacing:0.06em; }
 .hw .final-inner { position:relative; z-index:2; max-width:680px; margin:0 auto; }
-.hw .final-title { font-size:clamp(44px,7vw,100px); line-height:1.0; margin-bottom:36px; }
+.hw .final-title { font-size:clamp(44px,7vw,100px); line-height:1.18; margin-bottom:36px; }
 .hw .final-title em { font-style:italic; color:var(--gold-l); }
 .hw .final-body { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(19px,2vw,26px); color:var(--body); line-height:1.65; margin-bottom:60px; }
 .hw .final-details { font-size:12px; color:var(--muted); margin-top:28px; letter-spacing:0.06em; line-height:2.2; }
