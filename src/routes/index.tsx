@@ -70,6 +70,8 @@ const CSS = `
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .heimweh-page nav {
@@ -174,14 +176,13 @@ const CSS = `
   text-align: center;
 }
 .heimweh-page .image-band-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(24px, 3.4vw, 44px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: clamp(20px, 2.8vw, 34px);
   color: var(--cream);
   max-width: 720px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .heimweh-page .image-band-text em { color: var(--gold-light); font-style: italic; }
 
@@ -223,13 +224,12 @@ const CSS = `
 }
 .heimweh-page .hero-title-italic { font-style: italic; color: var(--gold-light); display: block; }
 .heimweh-page .hero-tagline {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 2.5vw, 30px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 300;
   color: var(--text-body);
   max-width: 580px;
-  line-height: 1.55;
+  line-height: 1.65;
   margin-bottom: 52px;
   opacity: 0;
   animation: hwFadeUp 1s 1s forwards;
@@ -299,11 +299,11 @@ const CSS = `
   margin-bottom: 20px;
 }
 .heimweh-page .rec-card-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(17px, 1.8vw, 21px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 300;
   color: var(--text-body);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .heimweh-page .recognition-statement {
@@ -326,12 +326,12 @@ const CSS = `
   flex-wrap: wrap;
 }
 .heimweh-page .cta-bar-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(22px, 2.8vw, 38px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 300;
   color: var(--cream);
   max-width: 640px;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .heimweh-page .warum {
@@ -349,9 +349,9 @@ const CSS = `
 }
 .heimweh-page .warum-big em { color: var(--gold-light); font-style: italic; }
 .heimweh-page .warum-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 2vw, 24px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(16px, 1.7vw, 21px);
+  font-weight: 300;
   color: var(--text-body);
   line-height: 1.75;
   margin-bottom: 32px;
@@ -369,9 +369,9 @@ const CSS = `
 .heimweh-page .angebot-title { font-size: clamp(42px, 6vw, 88px); line-height: 0.95; margin-bottom: 20px; }
 .heimweh-page .angebot-title-italic { font-style: italic; color: var(--gold-light); display: block; }
 .heimweh-page .angebot-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(18px, 2vw, 26px);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(16px, 1.7vw, 22px);
+  font-weight: 300;
   color: var(--text-body);
   max-width: 520px;
   margin-top: 16px;
@@ -451,9 +451,9 @@ const CSS = `
   margin-bottom: 14px;
 }
 .heimweh-page .price-note {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
   color: var(--text-muted);
   margin-bottom: 48px;
 }
@@ -470,9 +470,9 @@ const CSS = `
 }
 .heimweh-page .after-card { background: var(--brown-deep); padding: 48px 36px; }
 .heimweh-page .after-before {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
   color: var(--text-muted);
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(245,240,232,0.07);
@@ -481,11 +481,11 @@ const CSS = `
 }
 .heimweh-page .after-arrow { color: var(--gold); font-size: 20px; margin-bottom: 16px; }
 .heimweh-page .after-result {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 1.9vw, 23px);
-  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(16px, 1.7vw, 20px);
+  font-weight: 400;
   color: var(--cream);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .heimweh-page .furwen { padding: 120px 48px; background: linear-gradient(135deg, var(--brown-mid) 0%, var(--brown-deep) 100%); }
@@ -500,13 +500,13 @@ const CSS = `
 .heimweh-page .furwen-title { font-size: clamp(36px, 4vw, 58px); line-height: 1.05; margin-bottom: 40px; }
 .heimweh-page .furwen-list { list-style: none; }
 .heimweh-page .furwen-list li {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 1.8vw, 22px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(15px, 1.5vw, 19px);
+  font-weight: 300;
   color: var(--text-body);
   padding: 20px 0;
   border-bottom: 1px solid rgba(245,240,232,0.07);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .heimweh-page .furwen-list li:first-child { border-top: 1px solid rgba(245,240,232,0.07); }
 .heimweh-page .furwen-right { padding-top: 80px; }
@@ -517,16 +517,16 @@ const CSS = `
   margin-bottom: 2px;
 }
 .heimweh-page .quote-block-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(19px, 2vw, 26px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 300;
   color: var(--cream);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 .heimweh-page .quote-small {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(16px, 1.7vw, 20px);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 300;
   color: var(--text-body);
   line-height: 1.7;
   padding: 32px 0;
@@ -544,9 +544,9 @@ const CSS = `
 }
 .heimweh-page .carina-title { font-size: clamp(34px, 3.8vw, 56px); line-height: 1.05; margin-bottom: 36px; }
 .heimweh-page .carina-body-italic {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(19px, 2vw, 25px);
-  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 300;
   color: var(--text-body);
   line-height: 1.7;
   margin-bottom: 28px;
@@ -585,9 +585,9 @@ const CSS = `
 .heimweh-page .final-title { font-size: clamp(44px, 6.5vw, 96px); line-height: 1.0; margin-bottom: 36px; }
 .heimweh-page .final-title em { font-style: italic; color: var(--gold-light); }
 .heimweh-page .final-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(19px, 2vw, 26px);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 300;
   color: var(--text-body);
   line-height: 1.65;
   margin-bottom: 60px;
