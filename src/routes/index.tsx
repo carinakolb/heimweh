@@ -264,6 +264,48 @@ const CSS = `
   .hw .hero-btns { flex-direction:column; }
   .hw footer { padding:40px 24px; }
 }
+
+/* Readability + tone overrides */
+.hw { --light-bg:#2a1a10; --light-text:#f0e6d5; }
+.hw h1, .hw h2, .hw h3 { text-transform: uppercase; letter-spacing: 0.05em; }
+.hw .spiegel-situation, .hw .spiegel-eigentlich, .hw .reframe-body, .hw .reframe-main,
+.hw .desire-desc, .hw .fuerwen-item-text, .hw .fuerwen-nicht, .hw .trans-item,
+.hw .trans-item-after, .hw .testimonial-text, .hw .testimonial-result,
+.hw .methode-carina-body, .hw .methode-carina-big, .hw .methode-sub,
+.hw .methode-lernst-text, .hw .methode-lernst-punch,
+.hw .carina-italic, .hw .cta-bar-text, .hw .hero-sub, .hw .faq-q, .hw .faq-a,
+.hw .desire-moment, .hw .transformation-punch, .hw .testimonials-big,
+.hw .testimonials-between, .hw .final-body, .hw .warum-jetzt-text,
+.hw .carina-kompetenz-text, .hw .angebot-sub, .hw .price-note,
+.hw .spiegel-punch {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.hw .spiegel-situation, .hw .reframe-body, .hw .desire-desc, .hw .trans-item,
+.hw .trans-item-after, .hw .testimonial-text, .hw .methode-carina-body,
+.hw .methode-sub, .hw .methode-lernst-text, .hw .carina-italic, .hw .hero-sub,
+.hw .faq-a, .hw .warum-jetzt-text, .hw .carina-kompetenz-text, .hw .angebot-sub,
+.hw .final-body, .hw .fuerwen-item-text {
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.85;
+  color: var(--body);
+}
+.hw .fuerwen-item-text { color: var(--light-text); }
+.hw .reframe-main { font-size: clamp(26px, 3.4vw, 42px); font-weight: 600; line-height: 1.35; color: var(--cream); margin: 56px 0; letter-spacing: 0.02em; text-transform: none; }
+.hw .transformation-punch { font-size: clamp(26px, 3.4vw, 42px); font-weight: 600; line-height: 1.35; }
+.hw .transformation-punch em { color: var(--gold); }
+.hw .fuerwen-item, .hw .fuerwen-item:first-child { border-color: rgba(245,240,232,0.08); }
+.hw .fuerwen-check, .hw .fuerwen-nicht em { color: var(--gold); }
+.hw .trans-col-before { background:#3d2818; }
+.hw .trans-col-label, .hw .transformation-punch em { color: var(--gold); }
+.hw .trans-item { border-color: rgba(245,240,232,0.08); color: var(--light-text); }
+.hw .transformation-grid { background: rgba(245,240,232,0.08); }
+.hw .faq-item { border-color: rgba(245,240,232,0.08); }
+.hw .faq-q-icon { color: var(--gold); }
+.hw .faq-a { color: var(--light-text); }
+.hw .carina-portrait { opacity: 0.5; }
+.hw .price-amount { text-transform: none; }
 `;
 
 function Index() {
@@ -317,31 +359,23 @@ function Index() {
 
       <nav>
         <a href="#" className="nav-logo">Souverän Sein</a>
-        <a href="#anfragen" className="nav-cta">HEIMWEH anfragen</a>
+        <a href="#anfragen" className="nav-cta">Buche einen Vibecall</a>
       </nav>
 
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg" style={{ backgroundImage: `url(${bridgeImg})` }} />
-        <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung · Zürich</p>
+        <p className="hero-label">Core Emotional Bodywork · 1:1 Begleitung</p>
         <h1 className="hero-title">
           HEIMWEH<br />
           <em>Der Weg zurück zu dir.</em>
         </h1>
         <p className="hero-sub">
-          Für Frauen, die müde sind, sich selbst zu verlassen, nur damit andere bleiben.
-        </p>
-        <p className="hero-sub2">
-          Raus aus People Pleasing, Schuld und Verlustangst.<br />
-          Rein in verkörperte Sicherheit, klare Grenzen und ein Leben, das sich wieder nach dir anfühlt.
+          Raus aus People Pleasing, tschüss innerer Kritiker und willkommen im Leben für dich und mit dir.
         </p>
         <div className="hero-btns">
           <a href="#kennst" className="btn btn-gold">Ich will zurück zu mir</a>
-          <a href="#anfragen" className="btn btn-outline">HEIMWEH anfragen</a>
-        </div>
-        <div className="hero-scroll">
-          <div className="hero-scroll-line"></div>
-          <span>Scroll</span>
+          <a href="#anfragen" className="btn btn-outline">Buche einen Vibecall</a>
         </div>
       </section>
 
@@ -393,7 +427,7 @@ function Index() {
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du hast viel gelesen, viel reflektiert, viel verstanden. Du weisst auf der kognitiven Ebene genau, was los ist. Und trotzdem: In echten Momenten übernimmt der Körper alte Muster. Du weisst, was gesund wäre — und tust trotzdem das Gegenteil.
+              Du hast viel gelesen, viel reflektiert, viel verstanden. Du weisst auf der kognitiven Ebene genau, was los ist. Und trotzdem: In echten Momenten übernimmt der Körper alte Muster. Du weisst, was gesund wäre, und tust trotzdem das Gegenteil.
             </p>
             <p className="spiegel-eigentlich">
               Eigentlich weisst du, dass noch mehr Wissen nichts ändert. Was fehlt ist nicht Erkenntnis. Was fehlt ist, <em>dass dein Körper es endlich verstehen darf.</em>
@@ -426,22 +460,18 @@ function Index() {
               "Du tief in dir spürst: So wie ich lebe, komme ich nicht wirklich bei mir an.",
             ].map((t, i) => (
               <div className="fuerwen-item" key={i}>
-                <span className="fuerwen-check">—</span>
+                <span className="fuerwen-check">•</span>
                 <p className="fuerwen-item-text">{t}</p>
               </div>
             ))}
           </div>
-          <p className="fuerwen-nicht reveal">
-            Nicht, weil du schwach bist.<br />
-            <em>Sondern weil dein Körper gelernt hat: Anpassung bedeutet Sicherheit.</em>
-          </p>
         </div>
       </section>
 
       {/* CTA BAR 1 */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Und dann passiert es. Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d1">Ich möchte diesen Weg gehen</a>
+        <a href="#anfragen" className="btn btn-gold reveal d1">Dahin will ich</a>
       </div>
 
       {/* REFRAME */}
@@ -453,7 +483,7 @@ function Index() {
             <em>Dein Körper tut es, sobald er sich sicher genug fühlt.</em>
           </h2>
           <p className="reframe-body reveal d2">
-            HEIMWEH ist keine Begleitung, in der du lernst, "einfach Nein zu sagen". Denn du weisst längst, dass du Grenzen brauchst. In HEIMWEH arbeiten wir mit dem Moment davor: dem Druck im Brustkorb, dem schlechten Gewissen, der Angst, zu viel zu sein.
+            HEIMWEH ist keine Begleitung, in der du lernst, "einfach Nein zu sagen". Denn du kennst deine Grenzen schon längst und spürst sie auch jedes Mal, wenn du sie übergehst. In HEIMWEH arbeiten wir mit dem Moment davor: dem Druck im Brustkorb, dem schlechten Gewissen, der Angst, zu viel zu sein.
           </p>
           <p className="reframe-body reveal">
             Damit dein Nein nicht mehr gegen dein Nervensystem kämpfen muss.
@@ -463,12 +493,10 @@ function Index() {
             <div className="reframe-nicht-items">
               <div className="reframe-nicht-item">noch ein Mindset-Programm mit neuen Glaubenssätzen</div>
               <div className="reframe-nicht-item">noch mehr Journaling und Selbstreflexion</div>
-              <div className="reframe-nicht-item">ein "setz einfach Grenzen"-Ratschlag</div>
               <div className="reframe-nicht-item">ein Ort, an dem du funktionieren oder etwas leisten musst</div>
-              <div className="reframe-nicht-item">Therapieersatz</div>
             </div>
           </div>
-          <p className="reframe-body reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die nicht nur verstehen wollen, warum sie sich verlieren — sondern es im Körper verändern möchten.</p>
+          <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die nicht nur verstehen wollen, warum sie sich verlieren, sondern es im Körper verändern möchten.</p>
         </div>
       </section>
 
@@ -499,7 +527,7 @@ function Index() {
       {/* CTA BAR 2 */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Dieses Programm verändert deine ganze Beziehung zu dir.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d1">Ich will nicht mehr warten.</a>
+        <a href="#anfragen" className="btn btn-gold reveal d1">Ich bin bereit dazu</a>
       </div>
 
       {/* METHODE */}
@@ -507,7 +535,7 @@ function Index() {
         <div className="methode">
           <span className="label reveal">Wie es wirkt</span>
           <h2 className="methode-title reveal d1">Nicht durch Willenskraft.<br />Durch Verkörperung.</h2>
-          <p className="methode-sub reveal d2">Wir arbeiten nicht nur im Kopf. Nicht nur mit Journaling. Nicht nur mit "neuen Gedanken". Wir gehen dorthin, wo People Pleasing wirklich entsteht: in den Körper, in alte Schutzmuster, in den Moment, in dem du dich selbst verlässt, bevor du es überhaupt merkst.</p>
+          <p className="methode-sub reveal d2">Wir arbeiten nicht mit Reflexion, nicht mit Analysieren, nicht mit zu Tode reden. Wir gehen dorthin, wo People Pleasing wirklich entsteht: in den Körper, in alte Schutzmuster, in den Moment, in dem du dich selbst verlässt, bevor du es überhaupt merkst.</p>
 
           <div className="methode-carina reveal">
             <p className="methode-carina-big">Ich habe jahrelang so gelebt.<br /><em>Bis ich zugelassen habe, gehalten zu werden.</em></p>
@@ -518,7 +546,7 @@ function Index() {
             <div className="methode-step">
               <div className="methode-step-num">01</div>
               <h3 className="methode-step-title">Ankommen</h3>
-              <p className="methode-step-body">Dein Nervensystem bekommt Raum sich zu zeigen. Die Stimme, die so viel unterdrückt wurde, darf laut sein. In einem wertungsfreien Raum — ohne funktionieren zu müssen.</p>
+              <p className="methode-step-body">Dein Nervensystem bekommt Raum sich zu zeigen. Die Stimme, die so viel unterdrückt wurde, darf laut sein. In einem wertungsfreien Raum, ohne funktionieren zu müssen.</p>
             </div>
             <div className="methode-step">
               <div className="methode-step-num">02</div>
@@ -537,7 +565,6 @@ function Index() {
             <div className="methode-lernst-items">
               {[
                 "deinen Körper wieder zu spüren, bevor du dich verlierst.",
-                "Schuldgefühle zu halten, ohne sofort einzuknicken.",
                 "Grenzen zu setzen, ohne dich danach endlos zu erklären.",
                 "deine Bedürfnisse ernst zu nehmen, ohne dich dafür zu schämen.",
                 "dein Nervensystem zu beruhigen, wenn Verlustangst aktiviert wird.",
@@ -549,7 +576,7 @@ function Index() {
                 </div>
               ))}
             </div>
-            <p className="methode-lernst-punch">Du wirst nicht härter.<br /><em>Du wirst sicherer.</em></p>
+            <p className="methode-lernst-punch">Du wirst nicht perfekt.<br /><em>Aber authentisch. Und wirst es lieben.</em></p>
           </div>
         </div>
       </section>
@@ -593,7 +620,6 @@ function Index() {
       {/* TESTIMONIALS */}
       <section>
         <div className="testimonials">
-          <p className="testimonials-intro reveal">Nicht als Versprechen. Sondern als Einblick, was möglich wird, wenn dein Körper aufhört, gegen dich zu kämpfen.</p>
           <h2 className="testimonials-title reveal d1">
             Was passiert, wenn eine Frau aufhört,<br />
             <em>sich selbst zu übergehen.</em>
@@ -654,7 +680,7 @@ function Index() {
 
       {/* CTA BAR 3 */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen — sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
+        <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
         <a href="#anfragen" className="btn btn-gold reveal d1">Ja. Ich wähle mich.</a>
       </div>
 
@@ -666,7 +692,7 @@ function Index() {
             HEIMWEH<br />
             <em>ist meine Begleitung für dich.</em>
           </h2>
-          <p className="angebot-sub reveal d2">Für Frauen, die nicht länger nur funktionieren wollen — sondern wieder spüren möchten, wer sie sind.</p>
+          <p className="angebot-sub reveal d2">Für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind.</p>
 
           <div className="angebot-box reveal">
             <span className="angebot-box-label">Was enthalten ist</span>
@@ -675,7 +701,7 @@ function Index() {
                 <span className="angebot-item-num">3x</span>
                 <div>
                   <p className="angebot-item-title">1:1 Session live, je ca. 2 Stunden</p>
-                  <p className="angebot-item-body">In Zürich, Pfingstweidstrasse 31. Körperorientierte Tiefenarbeit mit Core Emotional Bodywork. Kein reines Gespräch — echter Prozess, der sich im Nervensystem speichert.</p>
+                  <p className="angebot-item-body">In Zürich, Pfingstweidstrasse 31. Körperorientierte Tiefenarbeit mit Core Emotional Bodywork. Kein reines Gespräch, echter Prozess, der sich im Nervensystem speichert.</p>
                 </div>
               </div>
               <div className="angebot-item">
@@ -702,8 +728,8 @@ function Index() {
           <div className="price-block" id="anfragen">
             <span className="price-label reveal">Investition</span>
             <p className="price-amount reveal d1">CHF 1100</p>
-            <p className="price-note reveal d2">Ratenzahlung auf Anfrage möglich · Twint, Überweisung oder Bar</p>
-            <a href="mailto:hallo@souveraen.sein?subject=HEIMWEH - Ich frage meinen Platz an" className="btn btn-gold reveal d3">Ich frage meinen HEIMWEH-Platz an</a>
+            <p className="price-note reveal d2">Ratenzahlung auf Anfrage möglich · Twint, Überweisung, Bitcoin oder Bar</p>
+            <a href="mailto:hallo@souveraen.sein?subject=HEIMWEH - Ich frage meinen Platz an" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
           </div>
         </div>
       </section>
@@ -715,11 +741,11 @@ function Index() {
             <span className="label reveal">Wer ich bin</span>
             <h2 className="carina-title reveal d1">Ich kenne dieses Gefühl.</h2>
             <p className="carina-italic reveal d2">Dieses ständige Scannen. Dieses innerliche Zusammenzucken, wenn jemand enttäuscht ist. Dieses Leise-Werden, obwohl innen alles schreit.</p>
-            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden — aus der Erfahrung, dass es nicht reicht zu wissen, was gesund wäre. Wir müssen es im Körper wieder sicher machen, uns selbst zu wählen.</p>
+            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden, aus der Erfahrung, dass es nicht reicht zu wissen, was gesund wäre. Wir müssen es im Körper wieder sicher machen, uns selbst zu wählen.</p>
             <p className="carina-regular reveal">Heute halte ich Räume für Frauen, die nicht mehr "unkompliziert" sein wollen, wenn unkompliziert bedeutet, sich selbst zu verlieren.</p>
 
             <div className="carina-kompetenz reveal">
-              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. In meinem Raum musst du nichts leisten, nichts beweisen und nichts richtig machen. Meine Arbeit verbindet emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung — nicht als Konzept, sondern als Erfahrung im Körper.</p>
+              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. In meinem Raum musst du nichts leisten, nichts beweisen und nichts richtig machen. Meine Arbeit verbindet emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung, nicht als Konzept, sondern als Erfahrung im Körper.</p>
             </div>
 
             <p className="carina-regular reveal">Ich setze an, bevor es andere tun. Dann wenn du weisst, dass du etwas ändern musst, und noch die Kraft hast, es zu tun.</p>
@@ -737,7 +763,7 @@ function Index() {
           {[
             ["Ist HEIMWEH richtig für mich, wenn ich schon viel reflektiert habe?", "Ja. Gerade dann. HEIMWEH ist für Frauen, die viel verstehen, aber merken, dass ihr Körper in echten Situationen trotzdem alte Schutzmuster übernimmt. Du brauchst nicht mehr Wissen. Du brauchst eine andere Ebene der Veränderung."],
             ["Was, wenn ich Angst habe, dadurch Menschen zu verlieren?", "Dann bist du genau an einem wichtigen Punkt. HEIMWEH geht nicht darum, kalt zu werden. Es geht darum, Nähe nicht mehr mit Selbstverlust zu bezahlen. Du wirst nicht hart. Du wirst sicherer in dir."],
-            ["Was passiert in einer Session?", "Wir arbeiten mit deinem Körper, deinen Emotionen, deiner inneren Stimme und den Momenten, in denen du dich selbst verlässt. Es ist kein reines Gespräch, sondern ein gehaltener Prozess — langsam, achtsam, tief."],
+            ["Was passiert in einer Session?", "Wir arbeiten mit deinem Körper, deinen Emotionen, deiner inneren Stimme und den Momenten, in denen du dich selbst verlässt. Es ist kein reines Gespräch, sondern ein gehaltener Prozess, langsam, achtsam, tief."],
             ["Muss ich schon Erfahrung mit Körperarbeit haben?", "Nein. Du wirst achtsam begleitet. Alles darf langsam gehen. Mein Raum ist so gestaltet, dass du nichts \"richtig\" machen musst."],
             ["Ist HEIMWEH Therapie?", "Nein. HEIMWEH ersetzt keine Psychotherapie. Es ist eine körperorientierte Begleitung für Selbstverbindung, emotionale Regulation und verkörperte Grenzen."],
             ["Kann ich in Raten zahlen?", "Ja, Ratenzahlung ist auf Anfrage möglich. Schreib mir einfach eine Nachricht."],
