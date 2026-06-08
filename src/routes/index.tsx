@@ -367,7 +367,7 @@ function Index() {
 
       <nav>
         <a href="#" className="nav-logo">Souverän Sein</a>
-        <a href="#anfragen" className="nav-cta">Buche einen Vibecall</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="nav-cta">Buche einen Vibecall</a>
       </nav>
 
       {/* HERO */}
@@ -475,7 +475,7 @@ function Index() {
         <span className="illum-eyebrow reveal">Und dann</span>
         <h2 className="illum-head reveal d1"><span className="gold">passiert</span> es.</h2>
         <p className="illum-body reveal d2">Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d3">Dahin will ich</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Dahin will ich</a>
       </div>
 
       {/* REFRAME */}
@@ -531,7 +531,7 @@ function Index() {
       {/* CTA BAR 2 */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Dieses Programm verändert deine ganze Beziehung zu dir.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d1">Ich bin bereit dazu</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich bin bereit dazu</a>
       </div>
 
       {/* METHODE */}
@@ -695,7 +695,7 @@ function Index() {
       {/* CTA BAR 3 */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
-        <a href="#anfragen" className="btn btn-gold reveal d1">Ja. Ich wähle mich.</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja. Ich wähle mich.</a>
       </div>
 
       {/* ANGEBOT */}
@@ -743,7 +743,7 @@ function Index() {
             <span className="price-label reveal">Investition</span>
             <p className="price-amount reveal d1">CHF 1100</p>
             <p className="price-note reveal d2">Ratenzahlung auf Anfrage möglich · Twint, Überweisung, Bitcoin oder Bar</p>
-            <a href="mailto:hallo@souveraen.sein?subject=HEIMWEH - Ich frage meinen Platz an" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
+            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
           </div>
         </div>
       </section>
@@ -800,7 +800,7 @@ function Index() {
             Du musst nach Hause kommen.
           </p>
           <div className="reveal d3">
-            <a href="mailto:hallo@souveraen.sein?subject=HEIMWEH - Ich frage meinen Platz an" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich komme nach Hause zu mir.</a>
+            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich komme nach Hause zu mir.</a>
           </div>
           <p className="final-details reveal">
             CHF 1100 · 3 x 1:1 Session (je ca. 2h) · 2 Embodiment-Aufnahmen · WhatsApp-Begleitung<br />
