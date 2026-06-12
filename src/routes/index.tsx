@@ -367,7 +367,7 @@ function Index() {
 
       <nav>
         <a href="#" className="nav-logo">Souverän Sein</a>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="nav-cta">Buche einen Vibecall</a>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="nav-cta">Buche einen Vibecall</a>
       </nav>
 
       {/* HERO */}
@@ -743,7 +743,7 @@ function Index() {
             <span className="price-label reveal">Investition</span>
             <p className="price-amount reveal d1">CHF 1100</p>
             <p className="price-note reveal d2">Ratenzahlung auf Anfrage möglich · Twint, Überweisung, Bitcoin oder Bar</p>
-            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
+            <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
           </div>
         </div>
       </section>
