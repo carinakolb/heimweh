@@ -409,17 +409,17 @@ function Index() {
           <em>Der Weg zurück zu dir.</em>
         </h1>
         <p className="hero-sub">
-          Raus aus People Pleasing, tschüss innerer Kritiker und willkommen im Leben für dich und mit dir.
+          Raus aus People Pleasing. Zurück zu dir.
         </p>
       </section>
 
       {/* CLARITY BAR */}
       <div className="clarity-bar">
         <p className="clarity-bar-text">
-          Für Frauen, die müde sind, sich selbst zu verlassen, nur damit andere bleiben. Die im Leisten, im Anpassen, im immer-für-alle-da-sein so viel von sich gegeben haben, dass sie irgendwann vergessen haben, wer sie ohne das alles sind.
+          Für Frauen, die müde sind, sich selbst zu verlassen, damit andere bleiben. Die so lange angepasst haben, dass sie vergessen haben, wer sie ohne das alles sind.
         </p>
         <p className="clarity-bar-text">
-          Hier findest du den Weg zurück. Nicht durch Willenskraft. Nicht durch noch mehr Disziplin. Sondern durch deinen Körper - den einzigen Ort, von dem Veränderung wirklich ausgeht.
+          Hier findest du den Weg zurück. Nicht durch Willenskraft. Sondern durch deinen Körper - den einzigen Ort, von dem Veränderung wirklich ausgeht.
         </p>
       </div>
 
@@ -432,37 +432,37 @@ function Index() {
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Jemand sagt spontan ab und dein Abend wird frei. Und anstatt durchzuatmen, scrollst du dich direkt durch deine To-do-Liste. Du rufst jemanden an. Du füllst die Stille, bevor sie überhaupt entstehen kann.
+              Jemand sagt ab, dein Abend wird frei. Statt durchzuatmen, scrollst du dich durch deine To-do-Liste. Du füllst die Stille, bevor sie entstehen kann.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass du Angst hast, dir selbst zu begegnen. Weil du dann erkennen würdest, <em>wie gross diese Leere bereits ist.</em>
+              Eigentlich weisst du: Du hast Angst, dir selbst zu begegnen. Weil du dann erkennen würdest, <em>wie gross diese Leere bereits ist.</em>
             </p>
           </div>
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du sagst Ja, obwohl dein Körper Nein sagt. Du sprichst deine Bedürfnisse nicht aus, weil du gelernt hast: Wer keine Bedürfnisse hat, fällt nicht negativ auf. Jeder mag dich, wenn du unkompliziert bist.
+              Du sagst Ja, obwohl dein Körper Nein sagt. Wer keine Bedürfnisse hat, fällt nicht negativ auf. Wer unkompliziert ist, wird gemocht.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass unkompliziert zu sein kein Kompliment ist. Sondern die höflichste Art zu sagen: <em>Du existierst so leise, dass du niemanden störst.</em>
+              Eigentlich weisst du: Unkompliziert ist kein Kompliment. Es heisst: <em>Du existierst so leise, dass du niemanden störst.</em>
             </p>
           </div>
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du setzt Grenzen und nimmst sie danach wieder zurück. Du spürst sofort Schuld, wenn jemand enttäuscht ist. Du erklärst dich, rechtfertigst dich, machst dich kleiner, bis sich die Stimmung wieder aufgelöst hat.
+              Du setzt Grenzen und nimmst sie zurück. Du spürst Schuld, sobald jemand enttäuscht ist. Erklärst dich, machst dich kleiner, bis die Stimmung sich auflöst.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass das nicht Rücksicht ist. Es ist <em>Angst. Verlustangst. Die Angst, zu viel zu sein.</em>
+              Eigentlich weisst du: Das ist nicht Rücksicht. Es ist <em>Verlustangst. Die Angst, zu viel zu sein.</em>
             </p>
           </div>
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du hast viel gelesen, viel reflektiert, viel verstanden. Du weisst auf der kognitiven Ebene genau, was los ist. Und trotzdem: In echten Momenten übernimmt der Körper alte Muster. Du weisst, was gesund wäre, und tust trotzdem das Gegenteil.
+              Du hast viel gelesen, viel reflektiert. Du weisst genau, was los ist. Und trotzdem übernimmt dein Körper im echten Moment alte Muster.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass noch mehr Wissen nichts ändert. Was fehlt ist nicht Erkenntnis. Was fehlt ist, <em>dass dein Körper es endlich verstehen darf.</em>
+              Eigentlich weisst du: Mehr Wissen ändert nichts. Was fehlt ist, <em>dass dein Körper es endlich verstehen darf.</em>
             </p>
           </div>
 
@@ -475,12 +475,17 @@ function Index() {
 
       {/* CTA nach Spiegel */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">Lass uns schauen, ob HEIMWEH dein nächster Schritt ist.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+        <p className="cta-bar-text reveal">Wenn es dich berührt - lass uns sprechen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
-      {/* IMG BAND 1 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
+      {/* IMG BAND 1 — Hände, ankommen im Körper */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-tall reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={handsImg} alt="Hände, die den eigenen Bauch halten - ankommen im Körper" />
+        </a>
+        <span className="media-caption">Bei dir ankommen. @souveraen.sein</span>
+      </section>
 
       {/* FÜR WEN */}
       <section className="fuerwen">
