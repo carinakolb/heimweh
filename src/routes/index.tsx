@@ -586,28 +586,28 @@ function Index() {
         <div className="methode">
           <span className="label reveal">Wie es wirkt</span>
           <h2 className="methode-title reveal d1">Nicht durch Willenskraft.<br />Durch Verkörperung.</h2>
-          <p className="methode-sub reveal d2">Wir arbeiten nicht mit Reflexion, nicht mit Analysieren, nicht mit zu Tode reden. Wir gehen dorthin, wo People Pleasing wirklich entsteht: in den Körper, in alte Schutzmuster, in den Moment, in dem du dich selbst verlässt, bevor du es überhaupt merkst.</p>
+          <p className="methode-sub reveal d2">Wir analysieren nicht. Wir gehen dorthin, wo People Pleasing entsteht: in den Körper. In den Moment, in dem du dich verlässt, bevor du es überhaupt merkst.</p>
 
           <div className="methode-carina reveal">
             <p className="methode-carina-big">Ich habe jahrelang so gelebt.<br /><em>Bis ich zugelassen habe, gehalten zu werden.</em></p>
-            <p className="methode-carina-body">Bis ich in einem Retreat zum ersten Mal zugelassen habe, dass jemand mich in meinen tiefsten Ängsten hält. In einem wertungsfreien Raum. Der Kampf gegen mich selbst wurde beendet, indem ich zugelassen habe, meine Schwächen zu zeigen und sie lieben zu lernen. Heute erschaffe ich genau diesen Raum für dich.</p>
+            <p className="methode-carina-body">In einem Retreat liess ich zum ersten Mal zu, dass jemand mich in meinen tiefsten Ängsten hält. Der Kampf gegen mich selbst endete dort. Heute erschaffe ich diesen Raum für dich.</p>
           </div>
 
           <div className="methode-steps reveal d1">
             <div className="methode-step">
               <div className="methode-step-num">01</div>
               <h3 className="methode-step-title">Ankommen</h3>
-              <p className="methode-step-body">Dein Nervensystem bekommt Raum sich zu zeigen. Die Stimme, die so viel unterdrückt wurde, darf laut sein. In einem wertungsfreien Raum, ohne funktionieren zu müssen.</p>
+              <p className="methode-step-body">Dein Nervensystem bekommt Raum. Die unterdrückte Stimme darf laut sein. Wertungsfrei, ohne funktionieren zu müssen.</p>
             </div>
             <div className="methode-step">
               <div className="methode-step-num">02</div>
               <h3 className="methode-step-title">In die Tiefe</h3>
-              <p className="methode-step-body">Core Emotional Bodywork. Wir gehen dorthin, wo die Worte aufhören. In den Körper. Du übst, wie sich ein verkörpertes Nein anfühlt. Wie Grenzen sich nicht erzwingen, sondern zeigen.</p>
+              <p className="methode-step-body">Core Emotional Bodywork. Dorthin, wo Worte aufhören. Du spürst, wie sich ein verkörpertes Nein anfühlt.</p>
             </div>
             <div className="methode-step">
               <div className="methode-step-num">03</div>
               <h3 className="methode-step-title">Heimkommen</h3>
-              <p className="methode-step-body">Du lernst dich selbst zu halten, zu regulieren und bei dir zu bleiben. Was zurück bleibt, bist du. Nah bei dir, nah an deiner kindlichen Lebensfreude, die du so vermisst.</p>
+              <p className="methode-step-body">Du lernst, dich selbst zu halten und bei dir zu bleiben. Nah an deiner Lebensfreude, die du so vermisst.</p>
             </div>
           </div>
 
@@ -634,22 +634,17 @@ function Index() {
 
       {/* CTA nach Methode */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">Hast du Fragen zur Methode? Lass uns sprechen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+        <p className="cta-bar-text reveal">Frag nach. Spür rein. Lass uns sprechen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
-      {/* IMG BAND 2 */}
-      <div
-        className="img-band reveal"
-        style={{
-          backgroundImage: `url(${portraitImg})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#1a1008',
-          opacity: 1,
-        }}
-      />
+      {/* VIDEO BAND — Verkörperung in Bewegung */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo} autoPlay muted loop playsInline />
+        </a>
+        <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
+      </section>
 
       {/* TRANSFORMATION */}
       <section className="transformation">
