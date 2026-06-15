@@ -561,11 +561,11 @@ function Index() {
           </h2>
 
           {[
-            ["Du sagst Nein. Und dein Körper entspannt sich.", <>Nicht weil du dich durchgesetzt hast. Sondern weil es sich einfach richtig anfühlt. Kein schlechtes Gewissen danach, keine innere Rechtfertigung. Du sprichst deine Bedürfnisse klar aus. Du kannst andere enttäuschen <em>und dich selbst dafür nicht verurteilen.</em></>],
-            ["Alleine sein ist der schönste Moment mit dir selbst.", <>Nicht mehr diese Unruhe wenn es still wird. Kein Griff zum Handy um die Leere zu füllen. Du bist gerne bei dir. Du kennst dich, du magst was du kennst. <em>Allein sein ist Privileg geworden.</em></>],
-            ["Du machst noch genauso viel. Aber aus einem anderen Teil von dir.", <>Diesem Teil, der dich Fülle fühlen lässt. Der sich begeistert, der sich freut, der Feuer hat. Der nicht aus Angst handelt, nicht um sich zu beweisen. Sondern weil du es liebst. Weil es sich richtig anfühlt. Weil <em>du es für dich tust.</em></>],
-            ["Das Innenleben wird so viel ruhiger.", <>Nicht mehr diese Stimmungskurven, nicht mehr alles so intensiv in alle Richtungen. Wenn Stress kommt, regulierst du dich selbst. <em>Niemand muss mehr im Aussen dich auffangen.</em></>],
-            ["Du läufst selbstbewusst durchs Leben und machst, was du willst.", <>Du bist im Frieden mit dir selbst, auch wenn du nicht alles richtig machst, auch wenn du Menschen enttäuschst. Du triffst Entscheidungen aus dir heraus und vertraust dir dabei. <em>Dein Leben fühlt sich wieder bewohnbar an. Wieder mehr nach dir.</em></>],
+            ["Du sagst Nein. Und dein Körper entspannt sich.", <>Nicht weil du dich durchgesetzt hast. Sondern weil es sich richtig anfühlt. Kein schlechtes Gewissen. Du kannst andere enttäuschen <em>und dich selbst nicht verurteilen.</em></>],
+            ["Alleine sein wird der schönste Moment mit dir selbst.", <>Keine Unruhe mehr, wenn es still wird. Kein Griff zum Handy. Du bist gerne bei dir. <em>Allein sein ist Privileg geworden.</em></>],
+            ["Du machst noch genauso viel. Aber aus einem anderen Teil von dir.", <>Dem Teil, der Fülle fühlt. Der Feuer hat. Der nicht aus Angst handelt. Sondern <em>weil du es für dich tust.</em></>],
+            ["Dein Innenleben wird ruhiger.", <>Keine Stimmungskurven mehr. Wenn Stress kommt, regulierst du dich selbst. <em>Niemand muss dich mehr auffangen.</em></>],
+            ["Du läufst durchs Leben und machst, was du willst.", <>Im Frieden mit dir - auch wenn du nicht alles richtig machst. Du entscheidest aus dir heraus und vertraust dir. <em>Dein Leben fühlt sich wieder nach dir an.</em></>],
           ].map(([title, body], i) => (
             <div className="desire-block reveal" key={i}>
               <p className="desire-moment">{title as string}</p>
@@ -577,8 +577,8 @@ function Index() {
 
       {/* CTA BAR 2 */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">Dieses Programm verändert deine ganze Beziehung zu dir.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich bin bereit dazu</a>
+        <p className="cta-bar-text reveal">Diese Begleitung verändert deine Beziehung zu dir.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
       </div>
 
       {/* METHODE */}
