@@ -682,8 +682,16 @@ function Index() {
       {/* CTA nach Transformation */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Diese Version von dir wartet schon.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich komme nach Hause zu mir.</a>
       </div>
+
+      {/* MEDIA — Stille im Gesicht */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-tall reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={faceImg} alt="Frau mit geschlossenen Augen - in sich ruhen" />
+        </a>
+        <span className="media-caption">In sich ruhen. @souveraen.sein</span>
+      </section>
 
       {/* TESTIMONIALS */}
       <section>
@@ -748,8 +756,8 @@ function Index() {
 
       {/* CTA BAR 3 */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja. Ich wähle mich.</a>
+        <p className="cta-bar-text reveal">Für Frauen, die wieder spüren wollen, wer sie sind und wo ihr echtes Nein beginnt.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
       </div>
 
       {/* ANGEBOT */}
@@ -760,7 +768,7 @@ function Index() {
             HEIMWEH<br />
             <em>ist meine Begleitung für dich.</em>
           </h2>
-          <p className="angebot-sub reveal d2">Für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind.</p>
+          <p className="angebot-sub reveal d2">Für Frauen, die wieder spüren möchten, wer sie sind.</p>
 
           <div className="angebot-box reveal">
             <span className="angebot-box-label">Was enthalten ist</span>
@@ -769,35 +777,35 @@ function Index() {
                 <span className="angebot-item-num">3x</span>
                 <div>
                   <p className="angebot-item-title">1:1 Session live, je ca. 2 Stunden</p>
-                  <p className="angebot-item-body">In Zürich, Pfingstweidstrasse 31. Körperorientierte Tiefenarbeit mit Core Emotional Bodywork. Kein reines Gespräch, echter Prozess, der sich im Nervensystem speichert.</p>
+                  <p className="angebot-item-body">Zürich, Pfingstweidstrasse 31. Core Emotional Bodywork - kein reines Gespräch, sondern Prozess, der sich im Nervensystem speichert.</p>
                 </div>
               </div>
               <div className="angebot-item">
                 <span className="angebot-item-num">2x</span>
                 <div>
                   <p className="angebot-item-title">Embodiment-Aufnahmen für dich zuhause</p>
-                  <p className="angebot-item-body">Geführte Aufnahmen, die du zwischen den Sessions nutzt. Um das Erlebte zu integrieren und im Alltag bei dir zu bleiben.</p>
+                  <p className="angebot-item-body">Geführte Aufnahmen für zwischen den Sessions - um das Erlebte im Alltag zu integrieren.</p>
                 </div>
               </div>
               <div className="angebot-item">
                 <span className="angebot-item-num">+</span>
                 <div>
                   <p className="angebot-item-title">WhatsApp-Begleitung zwischen den Sessions</p>
-                  <p className="angebot-item-body">Mein persönlicher Support auf deinem Weg. Du bist nicht alleine zwischen den Sessions.</p>
+                  <p className="angebot-item-body">Mein persönlicher Support. Du bist nicht alleine auf dem Weg.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="warum-jetzt reveal">
-            <p className="warum-jetzt-text">Ich halte nur wenige HEIMWEH-Plätze gleichzeitig, weil diese Arbeit eng, persönlich und tief begleitet ist. Wenn du spürst, dass du nicht noch ein Jahr in denselben Mustern leben willst, ist das dein nächster Schritt.</p>
+            <p className="warum-jetzt-text">Ich halte nur wenige HEIMWEH-Plätze gleichzeitig - diese Arbeit ist eng und tief begleitet. Wenn du nicht noch ein Jahr in denselben Mustern leben willst: Das ist dein Schritt.</p>
           </div>
 
           <div className="price-block" id="anfragen">
             <span className="price-label reveal">Investition</span>
             <p className="price-amount reveal d1">CHF 1100</p>
-            <p className="price-note reveal d2">Ratenzahlung auf Anfrage möglich · Twint, Überweisung, Bitcoin oder Bar</p>
-            <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
+            <p className="price-note reveal d2">Ratenzahlung möglich · Twint, Überweisung, Bitcoin oder Bar</p>
+            <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Ich melde mich.</a>
           </div>
         </div>
       </section>
