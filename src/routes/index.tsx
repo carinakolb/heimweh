@@ -494,13 +494,13 @@ function Index() {
           <h2 className="fuerwen-title reveal d1">Du dich in diesen Sätzen erkennst.</h2>
           <div className="fuerwen-items reveal d2">
             {[
-              "Du dich oft verantwortlich fühlst für die Gefühle anderer.",
-              "Du Angst hast, egoistisch, kalt oder kompliziert zu wirken.",
-              "Du in Beziehungen schnell dich selbst verlierst.",
-              "Du Grenzen setzt und sie danach wieder zurücknimmst.",
-              "Du dich nach Nähe sehnst, aber dich dafür oft verbiegst.",
-              "Du viel verstanden hast, aber im Alltag trotzdem in alte Muster fällst.",
-              "Du tief in dir spürst: So wie ich lebe, komme ich nicht wirklich bei mir an.",
+              "Du fühlst dich verantwortlich für die Gefühle anderer.",
+              "Du hast Angst, egoistisch oder kompliziert zu wirken.",
+              "Du verlierst dich in Beziehungen schnell selbst.",
+              "Du setzt Grenzen und nimmst sie wieder zurück.",
+              "Du sehnst dich nach Nähe und verbiegst dich dafür.",
+              "Du verstehst viel - und fällst trotzdem in alte Muster.",
+              "Du spürst: So komme ich nicht wirklich bei mir an.",
             ].map((t, i) => (
               <div className="fuerwen-item" key={i}>
                 <span className="fuerwen-check">•</span>
@@ -515,8 +515,8 @@ function Index() {
       <div className="cta-bar cta-bar-illum">
         <span className="illum-eyebrow reveal">Und dann</span>
         <h2 className="illum-head reveal d1"><span className="gold">passiert</span> es.</h2>
-        <p className="illum-body reveal d2">Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Dahin will ich</a>
+        <p className="illum-body reveal d2">Du begegnest dir selbst und erkennst: Alles, was du je gesucht hast, ist bereits in dir. Es geht nur darum, nach Hause zu kommen.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Ja - ich will mich wiederfinden.</a>
       </div>
 
       {/* REFRAME */}
@@ -528,7 +528,7 @@ function Index() {
             <em>Dein Körper tut es, sobald er sich sicher genug fühlt.</em>
           </h2>
           <p className="reframe-body reveal d2">
-            HEIMWEH ist keine Begleitung, in der du lernst, "einfach Nein zu sagen". Denn du kennst deine Grenzen schon längst und spürst sie auch jedes Mal, wenn du sie übergehst. In HEIMWEH arbeiten wir mit dem Moment davor: dem Druck im Brustkorb, dem schlechten Gewissen, der Angst, zu viel zu sein.
+            HEIMWEH ist keine Begleitung, in der du lernst, "einfach Nein zu sagen". Deine Grenzen kennst du längst. Wir arbeiten mit dem Moment davor: dem Druck im Brustkorb, dem schlechten Gewissen, der Angst, zu viel zu sein.
           </p>
           <p className="reframe-body reveal">
             Damit dein Nein nicht mehr gegen dein Nervensystem kämpfen muss.
@@ -536,19 +536,19 @@ function Index() {
           <div className="reframe-nicht reveal">
             <span className="reframe-nicht-title">HEIMWEH ist nicht</span>
             <div className="reframe-nicht-items">
-              <div className="reframe-nicht-item">noch ein Mindset-Programm mit neuen Glaubenssätzen</div>
-              <div className="reframe-nicht-item">noch mehr Journaling und Selbstreflexion</div>
-              <div className="reframe-nicht-item">ein Ort, an dem du funktionieren oder etwas leisten musst</div>
+              <div className="reframe-nicht-item">noch ein Mindset-Programm</div>
+              <div className="reframe-nicht-item">noch mehr Journaling</div>
+              <div className="reframe-nicht-item">ein Ort, an dem du funktionieren musst</div>
             </div>
           </div>
-          <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die nicht nur verstehen wollen, warum sie sich verlieren, sondern es im Körper verändern möchten.</p>
+          <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die es im Körper verändern wollen - nicht nur verstehen.</p>
         </div>
       </section>
 
       {/* CTA nach Reframe */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Bereit, es im Körper zu verändern?</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich bin bereit, nach Hause zu kommen.</a>
       </div>
 
       {/* DESIRE */}
