@@ -323,6 +323,27 @@ const CSS = `
 .hw .faq-a { color: var(--light-text); }
 .hw .carina-portrait { opacity: 0.5; }
 .hw .price-amount { text-transform: none; }
+
+/* Media anchors (images / video) */
+.hw .media-frame { display:block; width:100%; margin:0 auto; overflow:hidden; position:relative; background:var(--deep); }
+.hw .media-frame img, .hw .media-frame video { display:block; width:100%; height:100%; object-fit:cover; transition:transform 0.8s ease, opacity 0.6s ease; }
+.hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
+.hw .media-tall { height:min(78vh, 760px); }
+.hw .media-wide { height:min(62vh, 620px); }
+.hw .media-video { height:min(72vh, 680px); }
+.hw .media-section { padding:80px 52px; background:var(--deep); }
+.hw .media-caption { display:block; text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(14px,1.4vw,17px); color:var(--muted); margin-top:18px; letter-spacing:0.04em; }
+@media (max-width: 820px) {
+  .hw .media-section { padding:56px 16px; }
+  .hw .media-tall { height:min(70vh, 560px); }
+  .hw .media-wide { height:min(52vh, 440px); }
+  .hw .media-video { height:min(60vh, 520px); }
+  .hw .btn { padding:18px 36px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; }
+}
+
+.hw .footer-contact { display:flex; flex-direction:column; gap:6px; font-size:12px; color:var(--muted); letter-spacing:0.08em; }
+.hw .footer-contact a { color:var(--gold); text-decoration:none; transition:color 0.3s; }
+.hw .footer-contact a:hover { color:var(--gold-l); }
 `;
 
 function Index() {
