@@ -3,10 +3,19 @@ import { useEffect } from "react";
 import bridgeAsset from "@/assets/carina-bridge.jpeg.asset.json";
 import portraitAsset from "@/assets/carina-portrait.jpeg.asset.json";
 import natureAsset from "@/assets/carina-nature.jpeg.asset.json";
+import handsAsset from "@/assets/heimweh-hands.jpeg.asset.json";
+import faceAsset from "@/assets/heimweh-face.jpeg.asset.json";
+import waterfallAsset from "@/assets/heimweh-waterfall.jpeg.asset.json";
+import videoAsset from "@/assets/heimweh-video.mp4.asset.json";
 
 const bridgeImg = bridgeAsset.url;
 const portraitImg = portraitAsset.url;
 const natureImg = natureAsset.url;
+const handsImg = handsAsset.url;
+const faceImg = faceAsset.url;
+const waterfallImg = waterfallAsset.url;
+const heimwehVideo = videoAsset.url;
+const IG_URL = "https://instagram.com/souveraen.sein";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -314,6 +323,27 @@ const CSS = `
 .hw .faq-a { color: var(--light-text); }
 .hw .carina-portrait { opacity: 0.5; }
 .hw .price-amount { text-transform: none; }
+
+/* Media anchors (images / video) */
+.hw .media-frame { display:block; width:100%; margin:0 auto; overflow:hidden; position:relative; background:var(--deep); }
+.hw .media-frame img, .hw .media-frame video { display:block; width:100%; height:100%; object-fit:cover; transition:transform 0.8s ease, opacity 0.6s ease; }
+.hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
+.hw .media-tall { height:min(78vh, 760px); }
+.hw .media-wide { height:min(62vh, 620px); }
+.hw .media-video { height:min(72vh, 680px); }
+.hw .media-section { padding:80px 52px; background:var(--deep); }
+.hw .media-caption { display:block; text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(14px,1.4vw,17px); color:var(--muted); margin-top:18px; letter-spacing:0.04em; }
+@media (max-width: 820px) {
+  .hw .media-section { padding:56px 16px; }
+  .hw .media-tall { height:min(70vh, 560px); }
+  .hw .media-wide { height:min(52vh, 440px); }
+  .hw .media-video { height:min(60vh, 520px); }
+  .hw .btn { padding:18px 36px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; }
+}
+
+.hw .footer-contact { display:flex; flex-direction:column; gap:6px; font-size:12px; color:var(--muted); letter-spacing:0.08em; }
+.hw .footer-contact a { color:var(--gold); text-decoration:none; transition:color 0.3s; }
+.hw .footer-contact a:hover { color:var(--gold-l); }
 `;
 
 function Index() {
@@ -379,17 +409,17 @@ function Index() {
           <em>Der Weg zurück zu dir.</em>
         </h1>
         <p className="hero-sub">
-          Raus aus People Pleasing, tschüss innerer Kritiker und willkommen im Leben für dich und mit dir.
+          Raus aus People Pleasing. Zurück zu dir.
         </p>
       </section>
 
       {/* CLARITY BAR */}
       <div className="clarity-bar">
         <p className="clarity-bar-text">
-          Für Frauen, die müde sind, sich selbst zu verlassen, nur damit andere bleiben. Die im Leisten, im Anpassen, im immer-für-alle-da-sein so viel von sich gegeben haben, dass sie irgendwann vergessen haben, wer sie ohne das alles sind.
+          Für Frauen, die müde sind, sich selbst zu verlassen, damit andere bleiben. Die so lange angepasst haben, dass sie vergessen haben, wer sie ohne das alles sind.
         </p>
         <p className="clarity-bar-text">
-          Hier findest du den Weg zurück. Nicht durch Willenskraft. Nicht durch noch mehr Disziplin. Sondern durch deinen Körper - den einzigen Ort, von dem Veränderung wirklich ausgeht.
+          Hier findest du den Weg zurück. Nicht durch Willenskraft. Sondern durch deinen Körper - den einzigen Ort, von dem Veränderung wirklich ausgeht.
         </p>
       </div>
 
@@ -402,37 +432,37 @@ function Index() {
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Jemand sagt spontan ab und dein Abend wird frei. Und anstatt durchzuatmen, scrollst du dich direkt durch deine To-do-Liste. Du rufst jemanden an. Du füllst die Stille, bevor sie überhaupt entstehen kann.
+              Jemand sagt ab, dein Abend wird frei. Statt durchzuatmen, scrollst du dich durch deine To-do-Liste. Du füllst die Stille, bevor sie entstehen kann.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass du Angst hast, dir selbst zu begegnen. Weil du dann erkennen würdest, <em>wie gross diese Leere bereits ist.</em>
+              Eigentlich weisst du: Du hast Angst, dir selbst zu begegnen. Weil du dann erkennen würdest, <em>wie gross diese Leere bereits ist.</em>
             </p>
           </div>
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du sagst Ja, obwohl dein Körper Nein sagt. Du sprichst deine Bedürfnisse nicht aus, weil du gelernt hast: Wer keine Bedürfnisse hat, fällt nicht negativ auf. Jeder mag dich, wenn du unkompliziert bist.
+              Du sagst Ja, obwohl dein Körper Nein sagt. Wer keine Bedürfnisse hat, fällt nicht negativ auf. Wer unkompliziert ist, wird gemocht.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass unkompliziert zu sein kein Kompliment ist. Sondern die höflichste Art zu sagen: <em>Du existierst so leise, dass du niemanden störst.</em>
+              Eigentlich weisst du: Unkompliziert ist kein Kompliment. Es heisst: <em>Du existierst so leise, dass du niemanden störst.</em>
             </p>
           </div>
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du setzt Grenzen und nimmst sie danach wieder zurück. Du spürst sofort Schuld, wenn jemand enttäuscht ist. Du erklärst dich, rechtfertigst dich, machst dich kleiner, bis sich die Stimmung wieder aufgelöst hat.
+              Du setzt Grenzen und nimmst sie zurück. Du spürst Schuld, sobald jemand enttäuscht ist. Erklärst dich, machst dich kleiner, bis die Stimmung sich auflöst.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass das nicht Rücksicht ist. Es ist <em>Angst. Verlustangst. Die Angst, zu viel zu sein.</em>
+              Eigentlich weisst du: Das ist nicht Rücksicht. Es ist <em>Verlustangst. Die Angst, zu viel zu sein.</em>
             </p>
           </div>
 
           <div className="spiegel-block reveal">
             <p className="spiegel-situation">
-              Du hast viel gelesen, viel reflektiert, viel verstanden. Du weisst auf der kognitiven Ebene genau, was los ist. Und trotzdem: In echten Momenten übernimmt der Körper alte Muster. Du weisst, was gesund wäre, und tust trotzdem das Gegenteil.
+              Du hast viel gelesen, viel reflektiert. Du weisst genau, was los ist. Und trotzdem übernimmt dein Körper im echten Moment alte Muster.
             </p>
             <p className="spiegel-eigentlich">
-              Eigentlich weisst du, dass noch mehr Wissen nichts ändert. Was fehlt ist nicht Erkenntnis. Was fehlt ist, <em>dass dein Körper es endlich verstehen darf.</em>
+              Eigentlich weisst du: Mehr Wissen ändert nichts. Was fehlt ist, <em>dass dein Körper es endlich verstehen darf.</em>
             </p>
           </div>
 
@@ -445,12 +475,17 @@ function Index() {
 
       {/* CTA nach Spiegel */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">Lass uns schauen, ob HEIMWEH dein nächster Schritt ist.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+        <p className="cta-bar-text reveal">Wenn es dich berührt - lass uns sprechen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
-      {/* IMG BAND 1 */}
-      <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
+      {/* IMG BAND 1 — Hände, ankommen im Körper */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-tall reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={handsImg} alt="Hände, die den eigenen Bauch halten - ankommen im Körper" />
+        </a>
+        <span className="media-caption">Bei dir ankommen. @souveraen.sein</span>
+      </section>
 
       {/* FÜR WEN */}
       <section className="fuerwen">
@@ -459,13 +494,13 @@ function Index() {
           <h2 className="fuerwen-title reveal d1">Du dich in diesen Sätzen erkennst.</h2>
           <div className="fuerwen-items reveal d2">
             {[
-              "Du dich oft verantwortlich fühlst für die Gefühle anderer.",
-              "Du Angst hast, egoistisch, kalt oder kompliziert zu wirken.",
-              "Du in Beziehungen schnell dich selbst verlierst.",
-              "Du Grenzen setzt und sie danach wieder zurücknimmst.",
-              "Du dich nach Nähe sehnst, aber dich dafür oft verbiegst.",
-              "Du viel verstanden hast, aber im Alltag trotzdem in alte Muster fällst.",
-              "Du tief in dir spürst: So wie ich lebe, komme ich nicht wirklich bei mir an.",
+              "Du fühlst dich verantwortlich für die Gefühle anderer.",
+              "Du hast Angst, egoistisch oder kompliziert zu wirken.",
+              "Du verlierst dich in Beziehungen schnell selbst.",
+              "Du setzt Grenzen und nimmst sie wieder zurück.",
+              "Du sehnst dich nach Nähe und verbiegst dich dafür.",
+              "Du verstehst viel - und fällst trotzdem in alte Muster.",
+              "Du spürst: So komme ich nicht wirklich bei mir an.",
             ].map((t, i) => (
               <div className="fuerwen-item" key={i}>
                 <span className="fuerwen-check">•</span>
@@ -480,8 +515,8 @@ function Index() {
       <div className="cta-bar cta-bar-illum">
         <span className="illum-eyebrow reveal">Und dann</span>
         <h2 className="illum-head reveal d1"><span className="gold">passiert</span> es.</h2>
-        <p className="illum-body reveal d2">Du begegnest dir selbst, auf der tiefsten und intimsten Art, und erkennst, dass alles was du je gesucht hast, bereits in dir ist. Alles was es dafür braucht, ist nach Hause zu kommen.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Dahin will ich</a>
+        <p className="illum-body reveal d2">Du begegnest dir selbst und erkennst: Alles, was du je gesucht hast, ist bereits in dir. Es geht nur darum, nach Hause zu kommen.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Ja - ich will mich wiederfinden.</a>
       </div>
 
       {/* REFRAME */}
@@ -493,7 +528,7 @@ function Index() {
             <em>Dein Körper tut es, sobald er sich sicher genug fühlt.</em>
           </h2>
           <p className="reframe-body reveal d2">
-            HEIMWEH ist keine Begleitung, in der du lernst, "einfach Nein zu sagen". Denn du kennst deine Grenzen schon längst und spürst sie auch jedes Mal, wenn du sie übergehst. In HEIMWEH arbeiten wir mit dem Moment davor: dem Druck im Brustkorb, dem schlechten Gewissen, der Angst, zu viel zu sein.
+            HEIMWEH ist keine Begleitung, in der du lernst, "einfach Nein zu sagen". Deine Grenzen kennst du längst. Wir arbeiten mit dem Moment davor: dem Druck im Brustkorb, dem schlechten Gewissen, der Angst, zu viel zu sein.
           </p>
           <p className="reframe-body reveal">
             Damit dein Nein nicht mehr gegen dein Nervensystem kämpfen muss.
@@ -501,19 +536,19 @@ function Index() {
           <div className="reframe-nicht reveal">
             <span className="reframe-nicht-title">HEIMWEH ist nicht</span>
             <div className="reframe-nicht-items">
-              <div className="reframe-nicht-item">noch ein Mindset-Programm mit neuen Glaubenssätzen</div>
-              <div className="reframe-nicht-item">noch mehr Journaling und Selbstreflexion</div>
-              <div className="reframe-nicht-item">ein Ort, an dem du funktionieren oder etwas leisten musst</div>
+              <div className="reframe-nicht-item">noch ein Mindset-Programm</div>
+              <div className="reframe-nicht-item">noch mehr Journaling</div>
+              <div className="reframe-nicht-item">ein Ort, an dem du funktionieren musst</div>
             </div>
           </div>
-          <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die nicht nur verstehen wollen, warum sie sich verlieren, sondern es im Körper verändern möchten.</p>
+          <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die es im Körper verändern wollen - nicht nur verstehen.</p>
         </div>
       </section>
 
       {/* CTA nach Reframe */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Bereit, es im Körper zu verändern?</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich bin bereit, nach Hause zu kommen.</a>
       </div>
 
       {/* DESIRE */}
@@ -526,11 +561,11 @@ function Index() {
           </h2>
 
           {[
-            ["Du sagst Nein. Und dein Körper entspannt sich.", <>Nicht weil du dich durchgesetzt hast. Sondern weil es sich einfach richtig anfühlt. Kein schlechtes Gewissen danach, keine innere Rechtfertigung. Du sprichst deine Bedürfnisse klar aus. Du kannst andere enttäuschen <em>und dich selbst dafür nicht verurteilen.</em></>],
-            ["Alleine sein ist der schönste Moment mit dir selbst.", <>Nicht mehr diese Unruhe wenn es still wird. Kein Griff zum Handy um die Leere zu füllen. Du bist gerne bei dir. Du kennst dich, du magst was du kennst. <em>Allein sein ist Privileg geworden.</em></>],
-            ["Du machst noch genauso viel. Aber aus einem anderen Teil von dir.", <>Diesem Teil, der dich Fülle fühlen lässt. Der sich begeistert, der sich freut, der Feuer hat. Der nicht aus Angst handelt, nicht um sich zu beweisen. Sondern weil du es liebst. Weil es sich richtig anfühlt. Weil <em>du es für dich tust.</em></>],
-            ["Das Innenleben wird so viel ruhiger.", <>Nicht mehr diese Stimmungskurven, nicht mehr alles so intensiv in alle Richtungen. Wenn Stress kommt, regulierst du dich selbst. <em>Niemand muss mehr im Aussen dich auffangen.</em></>],
-            ["Du läufst selbstbewusst durchs Leben und machst, was du willst.", <>Du bist im Frieden mit dir selbst, auch wenn du nicht alles richtig machst, auch wenn du Menschen enttäuschst. Du triffst Entscheidungen aus dir heraus und vertraust dir dabei. <em>Dein Leben fühlt sich wieder bewohnbar an. Wieder mehr nach dir.</em></>],
+            ["Du sagst Nein. Und dein Körper entspannt sich.", <>Nicht weil du dich durchgesetzt hast. Sondern weil es sich richtig anfühlt. Kein schlechtes Gewissen. Du kannst andere enttäuschen <em>und dich selbst nicht verurteilen.</em></>],
+            ["Alleine sein wird der schönste Moment mit dir selbst.", <>Keine Unruhe mehr, wenn es still wird. Kein Griff zum Handy. Du bist gerne bei dir. <em>Allein sein ist Privileg geworden.</em></>],
+            ["Du machst noch genauso viel. Aber aus einem anderen Teil von dir.", <>Dem Teil, der Fülle fühlt. Der Feuer hat. Der nicht aus Angst handelt. Sondern <em>weil du es für dich tust.</em></>],
+            ["Dein Innenleben wird ruhiger.", <>Keine Stimmungskurven mehr. Wenn Stress kommt, regulierst du dich selbst. <em>Niemand muss dich mehr auffangen.</em></>],
+            ["Du läufst durchs Leben und machst, was du willst.", <>Im Frieden mit dir - auch wenn du nicht alles richtig machst. Du entscheidest aus dir heraus und vertraust dir. <em>Dein Leben fühlt sich wieder nach dir an.</em></>],
           ].map(([title, body], i) => (
             <div className="desire-block reveal" key={i}>
               <p className="desire-moment">{title as string}</p>
@@ -542,8 +577,8 @@ function Index() {
 
       {/* CTA BAR 2 */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">Dieses Programm verändert deine ganze Beziehung zu dir.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich bin bereit dazu</a>
+        <p className="cta-bar-text reveal">Diese Begleitung verändert deine Beziehung zu dir.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
       </div>
 
       {/* METHODE */}
@@ -551,28 +586,28 @@ function Index() {
         <div className="methode">
           <span className="label reveal">Wie es wirkt</span>
           <h2 className="methode-title reveal d1">Nicht durch Willenskraft.<br />Durch Verkörperung.</h2>
-          <p className="methode-sub reveal d2">Wir arbeiten nicht mit Reflexion, nicht mit Analysieren, nicht mit zu Tode reden. Wir gehen dorthin, wo People Pleasing wirklich entsteht: in den Körper, in alte Schutzmuster, in den Moment, in dem du dich selbst verlässt, bevor du es überhaupt merkst.</p>
+          <p className="methode-sub reveal d2">Wir analysieren nicht. Wir gehen dorthin, wo People Pleasing entsteht: in den Körper. In den Moment, in dem du dich verlässt, bevor du es überhaupt merkst.</p>
 
           <div className="methode-carina reveal">
             <p className="methode-carina-big">Ich habe jahrelang so gelebt.<br /><em>Bis ich zugelassen habe, gehalten zu werden.</em></p>
-            <p className="methode-carina-body">Bis ich in einem Retreat zum ersten Mal zugelassen habe, dass jemand mich in meinen tiefsten Ängsten hält. In einem wertungsfreien Raum. Der Kampf gegen mich selbst wurde beendet, indem ich zugelassen habe, meine Schwächen zu zeigen und sie lieben zu lernen. Heute erschaffe ich genau diesen Raum für dich.</p>
+            <p className="methode-carina-body">In einem Retreat liess ich zum ersten Mal zu, dass jemand mich in meinen tiefsten Ängsten hält. Der Kampf gegen mich selbst endete dort. Heute erschaffe ich diesen Raum für dich.</p>
           </div>
 
           <div className="methode-steps reveal d1">
             <div className="methode-step">
               <div className="methode-step-num">01</div>
               <h3 className="methode-step-title">Ankommen</h3>
-              <p className="methode-step-body">Dein Nervensystem bekommt Raum sich zu zeigen. Die Stimme, die so viel unterdrückt wurde, darf laut sein. In einem wertungsfreien Raum, ohne funktionieren zu müssen.</p>
+              <p className="methode-step-body">Dein Nervensystem bekommt Raum. Die unterdrückte Stimme darf laut sein. Wertungsfrei, ohne funktionieren zu müssen.</p>
             </div>
             <div className="methode-step">
               <div className="methode-step-num">02</div>
               <h3 className="methode-step-title">In die Tiefe</h3>
-              <p className="methode-step-body">Core Emotional Bodywork. Wir gehen dorthin, wo die Worte aufhören. In den Körper. Du übst, wie sich ein verkörpertes Nein anfühlt. Wie Grenzen sich nicht erzwingen, sondern zeigen.</p>
+              <p className="methode-step-body">Core Emotional Bodywork. Dorthin, wo Worte aufhören. Du spürst, wie sich ein verkörpertes Nein anfühlt.</p>
             </div>
             <div className="methode-step">
               <div className="methode-step-num">03</div>
               <h3 className="methode-step-title">Heimkommen</h3>
-              <p className="methode-step-body">Du lernst dich selbst zu halten, zu regulieren und bei dir zu bleiben. Was zurück bleibt, bist du. Nah bei dir, nah an deiner kindlichen Lebensfreude, die du so vermisst.</p>
+              <p className="methode-step-body">Du lernst, dich selbst zu halten und bei dir zu bleiben. Nah an deiner Lebensfreude, die du so vermisst.</p>
             </div>
           </div>
 
@@ -599,22 +634,17 @@ function Index() {
 
       {/* CTA nach Methode */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">Hast du Fragen zur Methode? Lass uns sprechen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+        <p className="cta-bar-text reveal">Frag nach. Spür rein. Lass uns sprechen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
-      {/* IMG BAND 2 */}
-      <div
-        className="img-band reveal"
-        style={{
-          backgroundImage: `url(${portraitImg})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center top',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#1a1008',
-          opacity: 1,
-        }}
-      />
+      {/* VIDEO BAND — Verkörperung in Bewegung */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo} autoPlay muted loop playsInline />
+        </a>
+        <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
+      </section>
 
       {/* TRANSFORMATION */}
       <section className="transformation">
@@ -652,8 +682,16 @@ function Index() {
       {/* CTA nach Transformation */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Diese Version von dir wartet schon.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich komme nach Hause zu mir.</a>
       </div>
+
+      {/* MEDIA — Stille im Gesicht */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-tall reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={faceImg} alt="Frau mit geschlossenen Augen - in sich ruhen" />
+        </a>
+        <span className="media-caption">In sich ruhen. @souveraen.sein</span>
+      </section>
 
       {/* TESTIMONIALS */}
       <section>
@@ -718,8 +756,8 @@ function Index() {
 
       {/* CTA BAR 3 */}
       <div className="cta-bar">
-        <p className="cta-bar-text reveal">HEIMWEH ist für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind, was sie brauchen und wo ihr echtes Nein beginnt.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja. Ich wähle mich.</a>
+        <p className="cta-bar-text reveal">Für Frauen, die wieder spüren wollen, wer sie sind und wo ihr echtes Nein beginnt.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
       </div>
 
       {/* ANGEBOT */}
@@ -730,7 +768,7 @@ function Index() {
             HEIMWEH<br />
             <em>ist meine Begleitung für dich.</em>
           </h2>
-          <p className="angebot-sub reveal d2">Für Frauen, die nicht länger nur funktionieren wollen, sondern wieder spüren möchten, wer sie sind.</p>
+          <p className="angebot-sub reveal d2">Für Frauen, die wieder spüren möchten, wer sie sind.</p>
 
           <div className="angebot-box reveal">
             <span className="angebot-box-label">Was enthalten ist</span>
@@ -739,35 +777,35 @@ function Index() {
                 <span className="angebot-item-num">3x</span>
                 <div>
                   <p className="angebot-item-title">1:1 Session live, je ca. 2 Stunden</p>
-                  <p className="angebot-item-body">In Zürich, Pfingstweidstrasse 31. Körperorientierte Tiefenarbeit mit Core Emotional Bodywork. Kein reines Gespräch, echter Prozess, der sich im Nervensystem speichert.</p>
+                  <p className="angebot-item-body">Zürich, Pfingstweidstrasse 31. Core Emotional Bodywork - kein reines Gespräch, sondern Prozess, der sich im Nervensystem speichert.</p>
                 </div>
               </div>
               <div className="angebot-item">
                 <span className="angebot-item-num">2x</span>
                 <div>
                   <p className="angebot-item-title">Embodiment-Aufnahmen für dich zuhause</p>
-                  <p className="angebot-item-body">Geführte Aufnahmen, die du zwischen den Sessions nutzt. Um das Erlebte zu integrieren und im Alltag bei dir zu bleiben.</p>
+                  <p className="angebot-item-body">Geführte Aufnahmen für zwischen den Sessions - um das Erlebte im Alltag zu integrieren.</p>
                 </div>
               </div>
               <div className="angebot-item">
                 <span className="angebot-item-num">+</span>
                 <div>
                   <p className="angebot-item-title">WhatsApp-Begleitung zwischen den Sessions</p>
-                  <p className="angebot-item-body">Mein persönlicher Support auf deinem Weg. Du bist nicht alleine zwischen den Sessions.</p>
+                  <p className="angebot-item-body">Mein persönlicher Support. Du bist nicht alleine auf dem Weg.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="warum-jetzt reveal">
-            <p className="warum-jetzt-text">Ich halte nur wenige HEIMWEH-Plätze gleichzeitig, weil diese Arbeit eng, persönlich und tief begleitet ist. Wenn du spürst, dass du nicht noch ein Jahr in denselben Mustern leben willst, ist das dein nächster Schritt.</p>
+            <p className="warum-jetzt-text">Ich halte nur wenige HEIMWEH-Plätze gleichzeitig - diese Arbeit ist eng und tief begleitet. Wenn du nicht noch ein Jahr in denselben Mustern leben willst: Das ist dein Schritt.</p>
           </div>
 
           <div className="price-block" id="anfragen">
             <span className="price-label reveal">Investition</span>
             <p className="price-amount reveal d1">CHF 1100</p>
-            <p className="price-note reveal d2">Ratenzahlung auf Anfrage möglich · Twint, Überweisung, Bitcoin oder Bar</p>
-            <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Buche einen Vibecall</a>
+            <p className="price-note reveal d2">Ratenzahlung möglich · Twint, Überweisung, Bitcoin oder Bar</p>
+            <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Ich melde mich.</a>
           </div>
         </div>
       </section>
@@ -779,24 +817,32 @@ function Index() {
             <span className="label reveal">Wer ich bin</span>
             <h2 className="carina-title reveal d1">Ich kenne dieses Gefühl.</h2>
             <p className="carina-italic reveal d2">Dieses ständige Scannen. Dieses innerliche Zusammenzucken, wenn jemand enttäuscht ist. Dieses Leise-Werden, obwohl innen alles schreit.</p>
-            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden, aus der Erfahrung, dass es nicht reicht zu wissen, was gesund wäre. Wir müssen es im Körper wieder sicher machen, uns selbst zu wählen.</p>
-            <p className="carina-regular reveal">Heute halte ich Räume für Frauen, die nicht mehr "unkompliziert" sein wollen, wenn unkompliziert bedeutet, sich selbst zu verlieren.</p>
+            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden. Aus der Erfahrung, dass Wissen nicht reicht. Wir müssen es im Körper sicher machen, uns selbst zu wählen.</p>
+            <p className="carina-regular reveal">Heute halte ich Räume für Frauen, die nicht länger "unkompliziert" sein wollen, wenn das bedeutet, sich selbst zu verlieren.</p>
 
             <div className="carina-kompetenz reveal">
-              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. In meinem Raum musst du nichts leisten, nichts beweisen und nichts richtig machen. Meine Arbeit verbindet emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung, nicht als Konzept, sondern als Erfahrung im Körper.</p>
+              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. Du musst nichts leisten, nichts beweisen, nichts richtig machen. Emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung - als Erfahrung im Körper.</p>
             </div>
 
-            <p className="carina-regular reveal">Ich setze an, bevor es andere tun. Dann wenn du weisst, dass du etwas ändern musst, und noch die Kraft hast, es zu tun.</p>
+            <p className="carina-regular reveal">Ich setze an, bevor andere es tun. Wenn du noch die Kraft hast, etwas zu verändern.</p>
             <span className="carina-sig reveal">Carina</span>
             <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8, letterSpacing: "0.1em" }} className="reveal">Somatic Coach · Core Emotional Bodywork · Zürich</p>
           </div>
         </div>
       </section>
 
+      {/* MEDIA — Wasserfall, Heimkehr */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-wide reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={waterfallImg} alt="Frau am Wasserfall - Heimkehr" />
+        </a>
+        <span className="media-caption">Heimkehr. @souveraen.sein</span>
+      </section>
+
       {/* CTA nach Carina */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Lerne mich in einem Vibecall persönlich kennen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
       {/* FAQ */}
@@ -830,16 +876,21 @@ function Index() {
             Du musst nach Hause kommen.
           </p>
           <div className="reveal d3">
-            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich komme nach Hause zu mir.</a>
+            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich bin bereit, nach Hause zu kommen.</a>
           </div>
           <p className="final-details reveal">
             CHF 1100 · 3 x 1:1 Session (je ca. 2h) · 2 Embodiment-Aufnahmen · WhatsApp-Begleitung<br />
-            Ratenzahlung auf Anfrage · Zürich, Pfingstweidstrasse 31 · @souveraen.sein
+            Ratenzahlung möglich · Zürich, Pfingstweidstrasse 31
           </p>
         </div>
       </section>
 
       <footer>
+        <div className="footer-contact">
+          <a href="https://instagram.com/souveraen.sein" target="_blank" rel="noopener noreferrer">@souveraen.sein</a>
+          <a href="tel:+41796126415">079 612 64 15</a>
+          <span>Zürich, Pfingstweidstrasse 31</span>
+        </div>
         <p className="footer-copy">© 2025 Souverän Sein · Carina · Zürich</p>
       </footer>
     </div>
