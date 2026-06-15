@@ -3,10 +3,19 @@ import { useEffect } from "react";
 import bridgeAsset from "@/assets/carina-bridge.jpeg.asset.json";
 import portraitAsset from "@/assets/carina-portrait.jpeg.asset.json";
 import natureAsset from "@/assets/carina-nature.jpeg.asset.json";
+import handsAsset from "@/assets/heimweh-hands.jpeg.asset.json";
+import faceAsset from "@/assets/heimweh-face.jpeg.asset.json";
+import waterfallAsset from "@/assets/heimweh-waterfall.jpeg.asset.json";
+import videoAsset from "@/assets/heimweh-video.mp4.asset.json";
 
 const bridgeImg = bridgeAsset.url;
 const portraitImg = portraitAsset.url;
 const natureImg = natureAsset.url;
+const handsImg = handsAsset.url;
+const faceImg = faceAsset.url;
+const waterfallImg = waterfallAsset.url;
+const heimwehVideo = videoAsset.url;
+const IG_URL = "https://instagram.com/souveraen.sein";
 
 export const Route = createFileRoute("/")({
   head: () => ({
