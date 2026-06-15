@@ -597,6 +597,12 @@ function Index() {
         </div>
       </section>
 
+      {/* CTA nach Methode */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Hast du Fragen zur Methode? Lass uns sprechen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+      </div>
+
       {/* IMG BAND 2 */}
       <div
         className="img-band reveal"
