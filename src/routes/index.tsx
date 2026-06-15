@@ -443,6 +443,12 @@ function Index() {
         </div>
       </section>
 
+      {/* CTA nach Spiegel */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Lass uns schauen, ob HEIMWEH dein nächster Schritt ist.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+      </div>
+
       {/* IMG BAND 1 */}
       <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
 
@@ -503,6 +509,12 @@ function Index() {
           <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die nicht nur verstehen wollen, warum sie sich verlieren, sondern es im Körper verändern möchten.</p>
         </div>
       </section>
+
+      {/* CTA nach Reframe */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Bereit, es im Körper zu verändern?</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+      </div>
 
       {/* DESIRE */}
       <section className="desire">
@@ -585,6 +597,12 @@ function Index() {
         </div>
       </section>
 
+      {/* CTA nach Methode */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Hast du Fragen zur Methode? Lass uns sprechen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+      </div>
+
       {/* IMG BAND 2 */}
       <div
         className="img-band reveal"
@@ -630,6 +648,12 @@ function Index() {
           </p>
         </div>
       </section>
+
+      {/* CTA nach Transformation */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Diese Version von dir wartet schon.</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+      </div>
 
       {/* TESTIMONIALS */}
       <section>
@@ -768,6 +792,12 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* CTA nach Carina */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Lerne mich in einem Vibecall persönlich kennen.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+      </div>
 
       {/* FAQ */}
       <section className="faq">
