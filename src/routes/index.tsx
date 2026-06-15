@@ -817,24 +817,32 @@ function Index() {
             <span className="label reveal">Wer ich bin</span>
             <h2 className="carina-title reveal d1">Ich kenne dieses Gefühl.</h2>
             <p className="carina-italic reveal d2">Dieses ständige Scannen. Dieses innerliche Zusammenzucken, wenn jemand enttäuscht ist. Dieses Leise-Werden, obwohl innen alles schreit.</p>
-            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden, aus der Erfahrung, dass es nicht reicht zu wissen, was gesund wäre. Wir müssen es im Körper wieder sicher machen, uns selbst zu wählen.</p>
-            <p className="carina-regular reveal">Heute halte ich Räume für Frauen, die nicht mehr "unkompliziert" sein wollen, wenn unkompliziert bedeutet, sich selbst zu verlieren.</p>
+            <p className="carina-regular reveal">HEIMWEH ist aus meinem eigenen Weg entstanden. Aus der Erfahrung, dass Wissen nicht reicht. Wir müssen es im Körper sicher machen, uns selbst zu wählen.</p>
+            <p className="carina-regular reveal">Heute halte ich Räume für Frauen, die nicht länger "unkompliziert" sein wollen, wenn das bedeutet, sich selbst zu verlieren.</p>
 
             <div className="carina-kompetenz reveal">
-              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. In meinem Raum musst du nichts leisten, nichts beweisen und nichts richtig machen. Meine Arbeit verbindet emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung, nicht als Konzept, sondern als Erfahrung im Körper.</p>
+              <p className="carina-kompetenz-text">Ich arbeite körperorientiert, traumasensibel und langsam genug, damit dein Nervensystem mitkommen kann. Du musst nichts leisten, nichts beweisen, nichts richtig machen. Emotionale Prozessarbeit, Nervensystem-Regulation und Verkörperung - als Erfahrung im Körper.</p>
             </div>
 
-            <p className="carina-regular reveal">Ich setze an, bevor es andere tun. Dann wenn du weisst, dass du etwas ändern musst, und noch die Kraft hast, es zu tun.</p>
+            <p className="carina-regular reveal">Ich setze an, bevor andere es tun. Wenn du noch die Kraft hast, etwas zu verändern.</p>
             <span className="carina-sig reveal">Carina</span>
             <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8, letterSpacing: "0.1em" }} className="reveal">Somatic Coach · Core Emotional Bodywork · Zürich</p>
           </div>
         </div>
       </section>
 
+      {/* MEDIA — Wasserfall, Heimkehr */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-wide reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={waterfallImg} alt="Frau am Wasserfall - Heimkehr" />
+        </a>
+        <span className="media-caption">Heimkehr. @souveraen.sein</span>
+      </section>
+
       {/* CTA nach Carina */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Lerne mich in einem Vibecall persönlich kennen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
       {/* FAQ */}
@@ -868,16 +876,21 @@ function Index() {
             Du musst nach Hause kommen.
           </p>
           <div className="reveal d3">
-            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich komme nach Hause zu mir.</a>
+            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich bin bereit, nach Hause zu kommen.</a>
           </div>
           <p className="final-details reveal">
             CHF 1100 · 3 x 1:1 Session (je ca. 2h) · 2 Embodiment-Aufnahmen · WhatsApp-Begleitung<br />
-            Ratenzahlung auf Anfrage · Zürich, Pfingstweidstrasse 31 · @souveraen.sein
+            Ratenzahlung möglich · Zürich, Pfingstweidstrasse 31
           </p>
         </div>
       </section>
 
       <footer>
+        <div className="footer-contact">
+          <a href="https://instagram.com/souveraen.sein" target="_blank" rel="noopener noreferrer">@souveraen.sein</a>
+          <a href="tel:+41796126415">079 612 64 15</a>
+          <span>Zürich, Pfingstweidstrasse 31</span>
+        </div>
         <p className="footer-copy">© 2025 Souverän Sein · Carina · Zürich</p>
       </footer>
     </div>
