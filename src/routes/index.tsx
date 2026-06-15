@@ -510,6 +510,12 @@ function Index() {
         </div>
       </section>
 
+      {/* CTA nach Reframe */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Bereit, es im Körper zu verändern?</p>
+        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Jetzt anmelden</a>
+      </div>
+
       {/* DESIRE */}
       <section className="desire">
         <div className="desire-inner">
