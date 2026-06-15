@@ -443,6 +443,12 @@ function Index() {
         </div>
       </section>
 
+      {/* CTA nach Spiegel */}
+      <div className="cta-bar">
+        <p className="cta-bar-text reveal">Lass uns schauen, ob HEIMWEH dein nächster Schritt ist.</p>
+        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Buche einen Vibecall</a>
+      </div>
+
       {/* IMG BAND 1 */}
       <div className="img-band reveal" style={{ backgroundImage: `url(${natureImg})` }} />
 
