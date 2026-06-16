@@ -515,7 +515,7 @@ function Index() {
       <section
         className="fuerwen"
         style={{
-          backgroundImage: `linear-gradient(rgba(240,235,224,0.88), rgba(240,235,224,0.9)), url(${handsImg})`,
+          backgroundImage: `linear-gradient(rgba(240,235,224,0.55), rgba(240,235,224,0.62)), url(${handsImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
