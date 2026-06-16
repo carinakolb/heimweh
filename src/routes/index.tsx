@@ -334,6 +334,7 @@ const CSS = `
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
 .hw .media-frame video.video-right { object-position: 95% center; }
 .hw .media-frame video.video-up { object-position: center 25%; }
+.hw .media-frame video.video-speaker { object-position: 100% center; transform: scale(1.25); transform-origin: 100% center; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
@@ -465,7 +466,7 @@ function Index() {
       {/* VIDEO — Verkörperung in Bewegung */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo} muted loop playsInline autoPlay preload="auto" className="video-right" />
+          <video src={heimwehVideo} muted loop playsInline autoPlay preload="auto" className="video-speaker" />
         </a>
         <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
       </section>
@@ -590,6 +591,14 @@ function Index() {
           </div>
           <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die es im Körper verändern wollen - nicht nur verstehen.</p>
         </div>
+      </section>
+
+      {/* VIDEO 3 */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo3} muted loop playsInline autoPlay preload="auto" />
+        </a>
+        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
 
       {/* CTA nach Reframe */}
@@ -738,14 +747,6 @@ function Index() {
           <img src={faceImg} alt="Frau mit geschlossenen Augen - in sich ruhen" />
         </a>
         <span className="media-caption">In sich ruhen. @souveraen.sein</span>
-      </section>
-
-      {/* VIDEO 3 */}
-      <section className="media-section">
-        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} muted loop playsInline autoPlay preload="auto" />
-        </a>
-        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
 
       {/* TESTIMONIALS */}
