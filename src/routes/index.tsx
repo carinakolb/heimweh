@@ -7,6 +7,8 @@ import handsAsset from "@/assets/heimweh-hands.jpeg.asset.json";
 import faceAsset from "@/assets/heimweh-face.jpeg.asset.json";
 import waterfallAsset from "@/assets/heimweh-waterfall.jpeg.asset.json";
 import videoAsset from "@/assets/heimweh-video.mp4.asset.json";
+import video2Asset from "@/assets/heimweh-video-2.mp4.asset.json";
+import video3Asset from "@/assets/heimweh-video-3.mp4.asset.json";
 
 const bridgeImg = bridgeAsset.url;
 const portraitImg = portraitAsset.url;
@@ -15,6 +17,8 @@ const handsImg = handsAsset.url;
 const faceImg = faceAsset.url;
 const waterfallImg = waterfallAsset.url;
 const heimwehVideo = videoAsset.url;
+const heimwehVideo2 = video2Asset.url;
+const heimwehVideo3 = video3Asset.url;
 const IG_URL = "https://instagram.com/souveraen.sein";
 
 export const Route = createFileRoute("/")({
@@ -328,6 +332,7 @@ const CSS = `
 .hw .media-frame { display:block; width:100%; margin:0 auto; overflow:hidden; position:relative; background:var(--deep); }
 .hw .media-frame img, .hw .media-frame video { display:block; width:100%; height:100%; object-fit:cover; transition:transform 0.8s ease, opacity 0.6s ease; }
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
+.hw .media-frame video.video-right { object-position: 78% center; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
@@ -426,7 +431,7 @@ function Index() {
       {/* VIDEO — Verkörperung in Bewegung */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo} autoPlay muted loop playsInline />
+          <video src={heimwehVideo} autoPlay muted loop playsInline className="video-right" />
         </a>
         <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
       </section>
@@ -646,6 +651,13 @@ function Index() {
         <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
+      {/* VIDEO 2 */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo2} autoPlay muted loop playsInline />
+        </a>
+        <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
+      </section>
 
       {/* TRANSFORMATION */}
       <section className="transformation">
@@ -692,6 +704,14 @@ function Index() {
           <img src={faceImg} alt="Frau mit geschlossenen Augen - in sich ruhen" />
         </a>
         <span className="media-caption">In sich ruhen. @souveraen.sein</span>
+      </section>
+
+      {/* VIDEO 3 */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo3} autoPlay muted loop playsInline />
+        </a>
+        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
 
       {/* TESTIMONIALS */}
