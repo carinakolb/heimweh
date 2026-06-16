@@ -340,7 +340,7 @@ const CSS = `
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
 .hw .media-frame video.video-right { object-position: 95% center; }
 .hw .media-frame video.video-up { object-position: center 25%; }
-.hw .media-frame video.video-speaker { object-position: 100% center; transform: scale(1.25); transform-origin: 100% center; }
+.hw .media-frame video.video-speaker { object-position: 85% 60%; transform: scale(1.18); transform-origin: 85% 60%; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
