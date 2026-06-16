@@ -364,20 +364,36 @@ function Index() {
     );
     document.querySelectorAll(".hw .reveal").forEach((el) => obs.observe(el));
 
+    const videos = Array.from(document.querySelectorAll<HTMLVideoElement>(".hw video"));
+    const playVideo = (video: HTMLVideoElement) => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.preload = "auto";
+      video.play().catch(() => {});
+    };
+
+    videos.forEach((video) => {
+      video.load();
+      playVideo(video);
+      video.addEventListener("loadeddata", () => playVideo(video));
+      video.addEventListener("canplay", () => playVideo(video));
+    });
+
     const videoObs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          const v = e.target as HTMLVideoElement;
-          if (e.isIntersecting) {
-            v.play().catch(() => {});
-          } else {
-            v.pause();
-          }
+          if (e.isIntersecting) playVideo(e.target as HTMLVideoElement);
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0, rootMargin: "55% 0px" }
     );
-    document.querySelectorAll(".hw video").forEach((el) => videoObs.observe(el));
+    videos.forEach((el) => videoObs.observe(el));
+
+    const resumeVideos = () => {
+      if (!document.hidden) videos.forEach(playVideo);
+    };
+    document.addEventListener("visibilitychange", resumeVideos);
 
     const onClick = (e: Event) => {
       const a = e.currentTarget as HTMLAnchorElement;
@@ -408,6 +424,7 @@ function Index() {
     return () => {
       obs.disconnect();
       videoObs.disconnect();
+      document.removeEventListener("visibilitychange", resumeVideos);
       anchors.forEach((a) => a.removeEventListener("click", onClick));
       faqHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
     };
