@@ -443,7 +443,7 @@ function Index() {
 
       <nav>
         <a href="#" className="nav-logo">Souverän Sein</a>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="nav-cta">Buche einen Vibecall</a>
+        <a href="/buchen" className="nav-cta">Buche einen Vibecall</a>
       </nav>
 
       {/* HERO */}
@@ -530,7 +530,7 @@ function Index() {
       {/* CTA nach Spiegel */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Wenn es dich berührt - lass uns sprechen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
+        <a href="/buchen" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
       {/* IMG BAND 1 — Hände, ankommen im Körper */}
@@ -570,7 +570,7 @@ function Index() {
         <span className="illum-eyebrow reveal">Und dann</span>
         <h2 className="illum-head reveal d1"><span className="gold">passiert</span> es.</h2>
         <p className="illum-body reveal d2">Du begegnest dir selbst und erkennst: Alles, was du je gesucht hast, ist bereits in dir. Es geht nur darum, nach Hause zu kommen.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Ja - ich will mich wiederfinden.</a>
+        <a data-thrivecart href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" className="btn btn-gold reveal d3">Ja - ich will mich wiederfinden.</a>
       </div>
 
       {/* REFRAME */}
@@ -610,7 +610,7 @@ function Index() {
       {/* CTA nach Reframe */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Bereit, es im Körper zu verändern?</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich bin bereit, nach Hause zu kommen.</a>
+        <a data-thrivecart href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" className="btn btn-gold reveal d1">Ich bin bereit, nach Hause zu kommen.</a>
       </div>
 
       {/* DESIRE */}
@@ -640,7 +640,7 @@ function Index() {
       {/* CTA BAR 2 */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Diese Begleitung verändert deine Beziehung zu dir.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
+        <a data-thrivecart href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
       </div>
 
       {/* METHODE */}
@@ -697,7 +697,7 @@ function Index() {
       {/* CTA nach Methode */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Frag nach. Spür rein. Lass uns sprechen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
+        <a href="/buchen" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
       {/* VIDEO 2 */}
@@ -744,7 +744,7 @@ function Index() {
       {/* CTA nach Transformation */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Diese Version von dir wartet schon.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ich komme nach Hause zu mir.</a>
+        <a data-thrivecart href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" className="btn btn-gold reveal d1">Ich komme nach Hause zu mir.</a>
       </div>
 
       {/* MEDIA — Stille im Gesicht */}
@@ -819,7 +819,7 @@ function Index() {
       {/* CTA BAR 3 */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Für Frauen, die wieder spüren wollen, wer sie sind und wo ihr echtes Nein beginnt.</p>
-        <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
+        <a data-thrivecart href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" className="btn btn-gold reveal d1">Ja - ich wähle mich.</a>
       </div>
 
       {/* ANGEBOT */}
@@ -867,7 +867,7 @@ function Index() {
             <span className="price-label reveal">Investition</span>
             <p className="price-amount reveal d1">CHF 1100</p>
             <p className="price-note reveal d2">Ratenzahlung möglich · Twint, Überweisung, Bitcoin oder Bar</p>
-            <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-gold reveal d3">Ich melde mich.</a>
+            <a href="/buchen" className="btn btn-gold reveal d3">Ich melde mich.</a>
           </div>
         </div>
       </section>
@@ -904,7 +904,7 @@ function Index() {
       {/* CTA nach Carina */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Lerne mich in einem Vibecall persönlich kennen.</p>
-        <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
+        <a href="/buchen" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
       {/* FAQ */}
@@ -938,7 +938,7 @@ function Index() {
             Du musst nach Hause kommen.
           </p>
           <div className="reveal d3">
-            <a href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich bin bereit, nach Hause zu kommen.</a>
+            <a data-thrivecart href="https://souveraensein.thrivecart.com/heimweh-der-weg-zurueck-zu-dir/" className="btn btn-gold" style={{ padding: "22px 68px", fontSize: 12 }}>Ich bin bereit, nach Hause zu kommen.</a>
           </div>
           <p className="final-details reveal">
             CHF 1100 · 3 x 1:1 Session (je ca. 2h) · 2 Embodiment-Aufnahmen · WhatsApp-Begleitung<br />
