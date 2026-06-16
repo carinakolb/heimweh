@@ -95,6 +95,12 @@ const CSS = `
 .hw .hero-scroll-line { width:1px; height:80px; background:linear-gradient(to bottom,var(--gold),transparent); animation:hwScrollPulse 2.5s infinite; }
 .hw .hero-bg { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; object-fit:cover; object-position:center top; opacity:1; z-index:0 !important; }
 .hw .hero > *:not(.hero-bg) { position:relative; z-index:1; }
+@media (max-width: 820px) {
+  .hw .hero { padding:0 24px 80px; min-height:100svh; }
+  .hw .hero-bg { object-position:center center; }
+  .hw .hero::after { background:linear-gradient(to bottom, rgba(26,16,8,0.25) 0%, rgba(26,16,8,0.45) 55%, rgba(26,16,8,0.85) 100%); }
+  .hw .hero-title { font-size:clamp(54px,13vw,82px); }
+}
 
 .hw .clarity-bar { background:var(--mid); padding:72px 52px; display:flex; flex-direction:column; gap:28px; border-top:1px solid rgba(201,169,110,0.15); }
 .hw .clarity-bar-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
