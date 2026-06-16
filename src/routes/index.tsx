@@ -363,6 +363,21 @@ function Index() {
     );
     document.querySelectorAll(".hw .reveal").forEach((el) => obs.observe(el));
 
+    const videoObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const v = e.target as HTMLVideoElement;
+          if (e.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    document.querySelectorAll(".hw video").forEach((el) => videoObs.observe(el));
+
     const onClick = (e: Event) => {
       const a = e.currentTarget as HTMLAnchorElement;
       const href = a.getAttribute("href");
@@ -391,6 +406,7 @@ function Index() {
 
     return () => {
       obs.disconnect();
+      videoObs.disconnect();
       anchors.forEach((a) => a.removeEventListener("click", onClick));
       faqHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
     };
@@ -431,7 +447,7 @@ function Index() {
       {/* VIDEO — Verkörperung in Bewegung */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo} autoPlay muted loop playsInline className="video-right" />
+          <video src={heimwehVideo} muted loop playsInline className="video-right" />
         </a>
         <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
       </section>
@@ -654,7 +670,7 @@ function Index() {
       {/* VIDEO 2 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo2} autoPlay muted loop playsInline />
+          <video src={heimwehVideo2} muted loop playsInline />
         </a>
         <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
       </section>
@@ -709,7 +725,7 @@ function Index() {
       {/* VIDEO 3 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} autoPlay muted loop playsInline />
+          <video src={heimwehVideo3} muted loop playsInline />
         </a>
         <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
