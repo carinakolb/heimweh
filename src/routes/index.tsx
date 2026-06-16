@@ -672,7 +672,7 @@ function Index() {
       {/* VIDEO 2 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo2} muted loop playsInline />
+          <video src={heimwehVideo2} muted loop playsInline className="video-top" />
         </a>
         <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
       </section>
