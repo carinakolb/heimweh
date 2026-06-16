@@ -706,6 +706,14 @@ function Index() {
         <span className="media-caption">In sich ruhen. @souveraen.sein</span>
       </section>
 
+      {/* VIDEO 3 */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo3} autoPlay muted loop playsInline />
+        </a>
+        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
+      </section>
+
       {/* TESTIMONIALS */}
       <section>
         <div className="testimonials">
