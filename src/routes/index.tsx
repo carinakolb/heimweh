@@ -332,9 +332,7 @@ const CSS = `
 .hw .media-frame { display:block; width:100%; margin:0 auto; overflow:hidden; position:relative; background:var(--deep); }
 .hw .media-frame img, .hw .media-frame video { display:block; width:100%; height:100%; object-fit:cover; transition:transform 0.8s ease, opacity 0.6s ease; }
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
-.hw .media-frame video.video-right { object-position: 100% center; }
-.hw .media-frame video.video-top { object-position: center top; }
-.hw .media-frame video.video-face { object-position: center 28%; }
+.hw .media-frame video.video-right { object-position: 95% center; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
@@ -511,10 +509,12 @@ function Index() {
       </div>
 
       {/* IMG BAND 1 — Hände, ankommen im Körper */}
-      <section
-        className="img-band"
-        style={{ backgroundImage: `url(${handsImg})` }}
-      />
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-tall reveal" aria-label="@souveraen.sein auf Instagram">
+          <img src={handsImg} alt="Hände, die den eigenen Bauch halten - ankommen im Körper" />
+        </a>
+        <span className="media-caption">Bei dir ankommen. @souveraen.sein</span>
+      </section>
 
       {/* FÜR WEN */}
       <section className="fuerwen">
@@ -572,14 +572,6 @@ function Index() {
           </div>
           <p className="reframe-main reveal">HEIMWEH ist körperorientierte Tiefenarbeit für Frauen, die es im Körper verändern wollen - nicht nur verstehen.</p>
         </div>
-      </section>
-
-      {/* VIDEO 3 — Zurück zu dir */}
-      <section className="media-section">
-        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} muted loop playsInline className="video-face" />
-        </a>
-        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
 
       {/* CTA nach Reframe */}
@@ -678,7 +670,7 @@ function Index() {
       {/* VIDEO 2 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo2} muted loop playsInline className="video-top" />
+          <video src={heimwehVideo2} muted loop playsInline />
         </a>
         <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
       </section>
@@ -728,6 +720,14 @@ function Index() {
           <img src={faceImg} alt="Frau mit geschlossenen Augen - in sich ruhen" />
         </a>
         <span className="media-caption">In sich ruhen. @souveraen.sein</span>
+      </section>
+
+      {/* VIDEO 3 */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo3} muted loop playsInline />
+        </a>
+        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
 
       {/* TESTIMONIALS */}
