@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DankeRouteImport } from './routes/danke'
+import { Route as BuchenRouteImport } from './routes/buchen'
 import { Route as IndexRouteImport } from './routes/index'
 
 const DankeRoute = DankeRouteImport.update({
   id: '/danke',
   path: '/danke',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuchenRoute = BuchenRouteImport.update({
+  id: '/buchen',
+  path: '/buchen',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/danke'
+  fullPaths: '/' | '/buchen' | '/danke'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/danke'
-  id: '__root__' | '/' | '/danke'
+  to: '/' | '/buchen' | '/danke'
+  id: '__root__' | '/' | '/buchen' | '/danke'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BuchenRoute: typeof BuchenRoute
   DankeRoute: typeof DankeRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/danke'
       fullPath: '/danke'
       preLoaderRoute: typeof DankeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buchen': {
+      id: '/buchen'
+      path: '/buchen'
+      fullPath: '/buchen'
+      preLoaderRoute: typeof BuchenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BuchenRoute: BuchenRoute,
   DankeRoute: DankeRoute,
 }
 export const routeTree = rootRouteImport
