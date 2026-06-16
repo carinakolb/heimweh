@@ -576,6 +576,14 @@ function Index() {
         </div>
       </section>
 
+      {/* VIDEO 3 — Zurück zu dir */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo3} muted loop playsInline />
+        </a>
+        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
+      </section>
+
       {/* CTA nach Reframe */}
       <div className="cta-bar">
         <p className="cta-bar-text reveal">Bereit, es im Körper zu verändern?</p>
@@ -722,14 +730,6 @@ function Index() {
           <img src={faceImg} alt="Frau mit geschlossenen Augen - in sich ruhen" />
         </a>
         <span className="media-caption">In sich ruhen. @souveraen.sein</span>
-      </section>
-
-      {/* VIDEO 3 */}
-      <section className="media-section">
-        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} muted loop playsInline />
-        </a>
-        <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
 
       {/* TESTIMONIALS */}
