@@ -511,16 +511,13 @@ function Index() {
       </div>
 
       {/* IMG BAND 1 — Hände, ankommen im Körper */}
-      {/* FÜR WEN */}
       <section
-        className="fuerwen"
-        style={{
-          backgroundImage: `linear-gradient(rgba(240,235,224,0.55), rgba(240,235,224,0.62)), url(${handsImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
+        className="img-band"
+        style={{ backgroundImage: `url(${handsImg})` }}
+      />
+
+      {/* FÜR WEN */}
+      <section className="fuerwen">
         <div className="fuerwen-inner">
           <span className="label-dark reveal">HEIMWEH ist für dich, wenn</span>
           <h2 className="fuerwen-title reveal d1">Du dich in diesen Sätzen erkennst.</h2>
