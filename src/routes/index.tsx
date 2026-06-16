@@ -333,6 +333,7 @@ const CSS = `
 .hw .media-frame img, .hw .media-frame video { display:block; width:100%; height:100%; object-fit:cover; transition:transform 0.8s ease, opacity 0.6s ease; }
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
 .hw .media-frame video.video-right { object-position: 95% center; }
+.hw .media-frame video.video-up { object-position: center 25%; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
@@ -670,7 +671,7 @@ function Index() {
       {/* VIDEO 2 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo2} muted loop playsInline />
+          <video src={heimwehVideo2} muted loop playsInline className="video-up" />
         </a>
         <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
       </section>
