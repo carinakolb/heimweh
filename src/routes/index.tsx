@@ -334,6 +334,7 @@ const CSS = `
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
 .hw .media-frame video.video-right { object-position: 100% center; }
 .hw .media-frame video.video-top { object-position: center top; }
+.hw .media-frame video.video-face { object-position: center 28%; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
@@ -514,7 +515,7 @@ function Index() {
       <section
         className="fuerwen"
         style={{
-          backgroundImage: `linear-gradient(rgba(240,235,224,0.88), rgba(240,235,224,0.9)), url(${handsImg})`,
+          backgroundImage: `linear-gradient(rgba(240,235,224,0.55), rgba(240,235,224,0.62)), url(${handsImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -579,7 +580,7 @@ function Index() {
       {/* VIDEO 3 — Zurück zu dir */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} muted loop playsInline />
+          <video src={heimwehVideo3} muted loop playsInline className="video-face" />
         </a>
         <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
