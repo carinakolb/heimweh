@@ -472,7 +472,7 @@ function Index() {
       {/* VIDEO — Verkörperung in Bewegung */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo} muted loop playsInline autoPlay preload="auto" disableRemotePlayback x-webkit-airplay="deny" {...({ "webkit-playsinline": "true" } as any)} className="video-speaker" />
+          <video src={heimwehVideo} muted loop playsInline autoPlay preload="auto" className="video-speaker" />
         </a>
         <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
       </section>
@@ -602,7 +602,7 @@ function Index() {
       {/* VIDEO 3 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} muted loop playsInline autoPlay preload="auto" disableRemotePlayback x-webkit-airplay="deny" {...({ "webkit-playsinline": "true" } as any)} />
+          <video src={heimwehVideo3} muted loop playsInline autoPlay preload="auto" />
         </a>
         <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
@@ -703,7 +703,7 @@ function Index() {
       {/* VIDEO 2 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo2} muted loop playsInline autoPlay preload="auto" disableRemotePlayback x-webkit-airplay="deny" {...({ "webkit-playsinline": "true" } as any)} className="video-up" />
+          <video src={heimwehVideo2} muted loop playsInline autoPlay preload="auto" className="video-up" />
         </a>
         <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
       </section>
