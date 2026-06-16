@@ -363,6 +363,21 @@ function Index() {
     );
     document.querySelectorAll(".hw .reveal").forEach((el) => obs.observe(el));
 
+    const videoObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const v = e.target as HTMLVideoElement;
+          if (e.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    document.querySelectorAll(".hw video").forEach((el) => videoObs.observe(el));
+
     const onClick = (e: Event) => {
       const a = e.currentTarget as HTMLAnchorElement;
       const href = a.getAttribute("href");
@@ -391,6 +406,7 @@ function Index() {
 
     return () => {
       obs.disconnect();
+      videoObs.disconnect();
       anchors.forEach((a) => a.removeEventListener("click", onClick));
       faqHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
     };
