@@ -334,6 +334,7 @@ const CSS = `
 .hw a.media-frame:hover img, .hw a.media-frame:hover video { transform:scale(1.02); opacity:0.92; }
 .hw .media-frame video.video-right { object-position: 100% center; }
 .hw .media-frame video.video-top { object-position: center top; }
+.hw .media-frame video.video-face { object-position: center 28%; }
 .hw .media-tall { height:min(78vh, 760px); }
 .hw .media-wide { height:min(62vh, 620px); }
 .hw .media-video { height:min(72vh, 680px); }
