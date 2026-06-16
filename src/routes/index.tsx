@@ -364,20 +364,36 @@ function Index() {
     );
     document.querySelectorAll(".hw .reveal").forEach((el) => obs.observe(el));
 
+    const videos = Array.from(document.querySelectorAll<HTMLVideoElement>(".hw video"));
+    const playVideo = (video: HTMLVideoElement) => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.preload = "auto";
+      video.play().catch(() => {});
+    };
+
+    videos.forEach((video) => {
+      video.load();
+      playVideo(video);
+      video.addEventListener("loadeddata", () => playVideo(video));
+      video.addEventListener("canplay", () => playVideo(video));
+    });
+
     const videoObs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          const v = e.target as HTMLVideoElement;
-          if (e.isIntersecting) {
-            v.play().catch(() => {});
-          } else {
-            v.pause();
-          }
+          if (e.isIntersecting) playVideo(e.target as HTMLVideoElement);
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0, rootMargin: "55% 0px" }
     );
-    document.querySelectorAll(".hw video").forEach((el) => videoObs.observe(el));
+    videos.forEach((el) => videoObs.observe(el));
+
+    const resumeVideos = () => {
+      if (!document.hidden) videos.forEach(playVideo);
+    };
+    document.addEventListener("visibilitychange", resumeVideos);
 
     const onClick = (e: Event) => {
       const a = e.currentTarget as HTMLAnchorElement;
@@ -408,6 +424,7 @@ function Index() {
     return () => {
       obs.disconnect();
       videoObs.disconnect();
+      document.removeEventListener("visibilitychange", resumeVideos);
       anchors.forEach((a) => a.removeEventListener("click", onClick));
       faqHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
     };
@@ -448,7 +465,7 @@ function Index() {
       {/* VIDEO — Verkörperung in Bewegung */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo} muted loop playsInline className="video-right" />
+          <video src={heimwehVideo} muted loop playsInline autoPlay preload="auto" className="video-right" />
         </a>
         <span className="media-caption">Verkörperung. Nicht erklärt - gespürt. @souveraen.sein</span>
       </section>
@@ -671,7 +688,7 @@ function Index() {
       {/* VIDEO 2 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo2} muted loop playsInline className="video-up" />
+          <video src={heimwehVideo2} muted loop playsInline autoPlay preload="auto" className="video-up" />
         </a>
         <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
       </section>
@@ -726,7 +743,7 @@ function Index() {
       {/* VIDEO 3 */}
       <section className="media-section">
         <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
-          <video src={heimwehVideo3} muted loop playsInline />
+          <video src={heimwehVideo3} muted loop playsInline autoPlay preload="auto" />
         </a>
         <span className="media-caption">Zurück zu dir. @souveraen.sein</span>
       </section>
