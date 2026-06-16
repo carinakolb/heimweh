@@ -510,15 +510,16 @@ function Index() {
       </div>
 
       {/* IMG BAND 1 — Hände, ankommen im Körper */}
-      <section className="media-section">
-        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-tall reveal" aria-label="@souveraen.sein auf Instagram">
-          <img src={handsImg} alt="Hände, die den eigenen Bauch halten - ankommen im Körper" />
-        </a>
-        <span className="media-caption">Bei dir ankommen. @souveraen.sein</span>
-      </section>
-
       {/* FÜR WEN */}
-      <section className="fuerwen">
+      <section
+        className="fuerwen"
+        style={{
+          backgroundImage: `linear-gradient(rgba(240,235,224,0.88), rgba(240,235,224,0.9)), url(${handsImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <div className="fuerwen-inner">
           <span className="label-dark reveal">HEIMWEH ist für dich, wenn</span>
           <h2 className="fuerwen-title reveal d1">Du dich in diesen Sätzen erkennst.</h2>
