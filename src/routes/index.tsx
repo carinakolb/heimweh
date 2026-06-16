@@ -651,6 +651,13 @@ function Index() {
         <a href="https://calendly.com/carina-kolb/vibe-call" target="_blank" rel="noopener noreferrer" className="btn btn-outline reveal d1">Ich melde mich.</a>
       </div>
 
+      {/* VIDEO 2 */}
+      <section className="media-section">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="media-frame media-video reveal" aria-label="@souveraen.sein auf Instagram">
+          <video src={heimwehVideo2} autoPlay muted loop playsInline />
+        </a>
+        <span className="media-caption">Im Körper zu Hause. @souveraen.sein</span>
+      </section>
 
       {/* TRANSFORMATION */}
       <section className="transformation">
