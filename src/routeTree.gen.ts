@@ -14,6 +14,7 @@ import { Route as BuchenRouteImport } from './routes/buchen'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
 import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/email/suppression'
+import { Route as ApiPublicThrivecartWebhookRouteImport } from './routes/api/public/thrivecart-webhook'
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
@@ -43,6 +44,12 @@ const LovableEmailSuppressionRoute = LovableEmailSuppressionRouteImport.update({
   path: '/lovable/email/suppression',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicThrivecartWebhookRoute =
+  ApiPublicThrivecartWebhookRouteImport.update({
+    id: '/api/public/thrivecart-webhook',
+    path: '/api/public/thrivecart-webhook',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LovableEmailTransactionalSendRoute =
   LovableEmailTransactionalSendRouteImport.update({
     id: '/lovable/email/transactional/send',
@@ -67,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/api/public/thrivecart-webhook': typeof ApiPublicThrivecartWebhookRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -77,6 +85,7 @@ export interface FileRoutesByTo {
   '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/api/public/thrivecart-webhook': typeof ApiPublicThrivecartWebhookRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -88,6 +97,7 @@ export interface FileRoutesById {
   '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/api/public/thrivecart-webhook': typeof ApiPublicThrivecartWebhookRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/buchen'
     | '/danke'
     | '/email/unsubscribe'
+    | '/api/public/thrivecart-webhook'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
@@ -110,6 +121,7 @@ export interface FileRouteTypes {
     | '/buchen'
     | '/danke'
     | '/email/unsubscribe'
+    | '/api/public/thrivecart-webhook'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
@@ -120,6 +132,7 @@ export interface FileRouteTypes {
     | '/buchen'
     | '/danke'
     | '/email/unsubscribe'
+    | '/api/public/thrivecart-webhook'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
@@ -131,6 +144,7 @@ export interface RootRouteChildren {
   BuchenRoute: typeof BuchenRoute
   DankeRoute: typeof DankeRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
+  ApiPublicThrivecartWebhookRoute: typeof ApiPublicThrivecartWebhookRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
@@ -174,6 +188,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LovableEmailSuppressionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/thrivecart-webhook': {
+      id: '/api/public/thrivecart-webhook'
+      path: '/api/public/thrivecart-webhook'
+      fullPath: '/api/public/thrivecart-webhook'
+      preLoaderRoute: typeof ApiPublicThrivecartWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lovable/email/transactional/send': {
       id: '/lovable/email/transactional/send'
       path: '/lovable/email/transactional/send'
@@ -203,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   BuchenRoute: BuchenRoute,
   DankeRoute: DankeRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
+  ApiPublicThrivecartWebhookRoute: ApiPublicThrivecartWebhookRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
