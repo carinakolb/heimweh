@@ -1,11 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createClient } from '@supabase/supabase-js'
 import { z } from 'zod'
-import {
-  generateRahmenvertragPdf,
-  generateRechnungPdf,
-} from '@/lib/pdf/heimweh-pdfs.server'
-import { sendTransactionalEmailInternal } from '@/lib/email/send-internal.server'
 
 const CALENDLY_URL = 'https://calendly.com/carina-kolb/vibe-call'
 const SIGNED_URL_TTL_SECONDS = 60 * 60 * 24 * 30 // 30 days
@@ -159,6 +154,9 @@ export const Route = createFileRoute('/api/public/thrivecart-webhook')({
         let contractPdf: Uint8Array
         let invoicePdf: Uint8Array
         try {
+          const { generateRahmenvertragPdf, generateRechnungPdf } = await import(
+            '@/lib/pdf/heimweh-pdfs.server'
+          )
           contractPdf = await generateRahmenvertragPdf(fullName)
           invoicePdf = await generateRechnungPdf({
             name: fullName,
@@ -228,6 +226,9 @@ export const Route = createFileRoute('/api/public/thrivecart-webhook')({
 
         // Enqueue welcome email
         try {
+          const { sendTransactionalEmailInternal } = await import(
+            '@/lib/email/send-internal.server'
+          )
           await sendTransactionalEmailInternal({
             templateName: 'heimweh-welcome',
             recipientEmail: email,
