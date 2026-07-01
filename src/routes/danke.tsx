@@ -346,6 +346,9 @@ function DankePage() {
           <p className="mx-auto mt-4 max-w-xl text-sm text-[color:var(--text-muted)] italic">
             Bis dahin – atme. Du bist auf dem Weg nach Hause.
           </p>
+          <p className="mx-auto mt-6 max-w-xl text-sm text-[color:var(--text-muted)]">
+            Du erhaeltst gleich eine Mail von uns mit Rahmenvertrag und Rechnung.
+          </p>
         </div>
 
         {/* Downloads */}

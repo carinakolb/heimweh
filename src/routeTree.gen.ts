@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as DankeRouteImport } from './routes/danke'
 import { Route as BuchenRouteImport } from './routes/buchen'
 import { Route as IndexRouteImport } from './routes/index'
@@ -19,6 +20,11 @@ import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lova
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 
+const UnsubscribeRoute = UnsubscribeRouteImport.update({
+  id: '/unsubscribe',
+  path: '/unsubscribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DankeRoute = DankeRouteImport.update({
   id: '/danke',
   path: '/danke',
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/thrivecart-webhook': typeof ApiPublicThrivecartWebhookRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/thrivecart-webhook': typeof ApiPublicThrivecartWebhookRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/buchen': typeof BuchenRoute
   '/danke': typeof DankeRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/thrivecart-webhook': typeof ApiPublicThrivecartWebhookRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/'
     | '/buchen'
     | '/danke'
+    | '/unsubscribe'
     | '/email/unsubscribe'
     | '/api/public/thrivecart-webhook'
     | '/lovable/email/suppression'
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/'
     | '/buchen'
     | '/danke'
+    | '/unsubscribe'
     | '/email/unsubscribe'
     | '/api/public/thrivecart-webhook'
     | '/lovable/email/suppression'
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/'
     | '/buchen'
     | '/danke'
+    | '/unsubscribe'
     | '/email/unsubscribe'
     | '/api/public/thrivecart-webhook'
     | '/lovable/email/suppression'
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BuchenRoute: typeof BuchenRoute
   DankeRoute: typeof DankeRoute
+  UnsubscribeRoute: typeof UnsubscribeRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   ApiPublicThrivecartWebhookRoute: typeof ApiPublicThrivecartWebhookRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
@@ -153,6 +166,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/unsubscribe': {
+      id: '/unsubscribe'
+      path: '/unsubscribe'
+      fullPath: '/unsubscribe'
+      preLoaderRoute: typeof UnsubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/danke': {
       id: '/danke'
       path: '/danke'
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BuchenRoute: BuchenRoute,
   DankeRoute: DankeRoute,
+  UnsubscribeRoute: UnsubscribeRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   ApiPublicThrivecartWebhookRoute: ApiPublicThrivecartWebhookRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
