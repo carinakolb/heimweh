@@ -1,44 +1,63 @@
-## Was wir bauen
+## Ziel
 
-### 1. ThriveCart als Popup-Checkout
-Alle ThriveCart-Buttons auf der Seite (aktuell `<a target="_blank">`) werden so umgebaut, dass sich der Checkout als Overlay über der Website öffnet, statt in einem neuen Tab. Das Design der Buttons bleibt unverändert (Gold-Style HEIMWEH).
+Sobald jemand über ThriveCart HEIMWEH kauft, bekommt er automatisch eine schön gestaltete Willkommens-E-Mail von `hallo@notify.souveraensein.ch` mit Rahmenvertrag und Rechnung als PDF sowie dem Calendly-Link zum Vibecall.
 
-Technisch: ThriveCarts offizielles Embed-Script wird einmal global geladen, Buttons bekommen das passende Attribut, damit sich das Modal öffnet. Funktioniert ohne Backend.
+## Ablauf (was passiert nach dem Klick auf "Kaufen")
 
-### 2. Calendly-Buchungsseite (`/buchen`)
-Neue Route `/buchen` mit Calendly inline eingebettet im HEIMWEH-Design (Cremehintergrund, Gold-Akzente, gleiche Typografie). Der "Vibecall buchen"-Button im Header sowie alle "Ich melde mich"-Buttons führen auf diese neue Seite statt direkt zu Calendly. Bestehende SEO-Metadaten pro Route.
+1. Kunde bezahlt bei ThriveCart.
+2. ThriveCart sendet einen Webhook an unsere neue öffentliche URL `https://souveraensein.ch/api/public/thrivecart-webhook`.
+3. Der Webhook prüft die Signatur, generiert Rahmenvertrag und Rechnung als PDF, lädt beide in Lovable Cloud Storage hoch (privater Bucket, signierte Links mit 30 Tagen Gültigkeit).
+4. Willkommens-Mail wird in die Sende-Warteschlange gelegt und automatisch verschickt (mit Name, Bestellnummer, Download-Links, Calendly-Link).
+5. Kunde wird von ThriveCart parallel weiter auf `/danke` geleitet (bleibt unverändert, dient als Sofort-Bestätigung).
 
-### 3. Automatische Bestätigungsmail nach Kauf
-Sobald jemand über ThriveCart bezahlt, schickt ThriveCart eine Benachrichtigung an die Website. Die Website verschickt daraufhin automatisch eine schöne Bestätigungsmail im HEIMWEH-Design mit:
-- Persönlicher Begrüßung
-- Rahmenbedingungen / Ablauf des Programms (was passiert als Nächstes)
-- Link zur Terminbuchung (Calendly über `/buchen`)
-- Link zur "Willkommen zuhause"-Seite (`/danke`), auf der die Kundin Rahmenvertrag und Rechnung als PDF herunterladen kann (existiert bereits)
+Hinweis: Direkte PDF-Anhänge werden vom E-Mail-System nicht unterstützt. Deshalb: sichere Download-Links im Mail-Body. Die Kunden können die PDFs mit einem Klick öffnen und speichern.
 
-Die separate Quittung läuft weiterhin über ThriveCarts eigenen Beleg + den PDF-Download auf `/danke`.
+## Was gebaut wird
 
-## Technische Details
+1. Lovable Cloud Storage
+   - Privater Bucket `order-documents` für generierte PDFs.
+   - Tabelle `orders` zur Ablage der Bestelldaten (Name, E-Mail, Betrag, ThriveCart-Order-ID, PDF-Pfade, Status), inkl. RLS.
 
-**Backend:**
-- Email-Infrastruktur einrichten (Lovable Emails, Versanddomain notwendig — du wirst durch das Setup geführt)
-- E-Mail-Template `purchase-confirmation.tsx` im HEIMWEH-Look (warmes Braun, Gold, Times-Serife)
-- Public Webhook-Route `/api/public/thrivecart-webhook`:
-  - Verifiziert ThriveCarts `thrivecart_secret` (Secret in Lovable Cloud abgelegt)
-  - Validiert Event `order.success`
-  - Speichert Bestellung in neuer Tabelle `purchases` (E-Mail, Name, Order-ID, Betrag, Datum)
-  - Enqueued Bestätigungsmail an Käuferin
-- ThriveCart-Webhook-URL und Secret muss du in deinem ThriveCart-Dashboard hinterlegen (genaue Anleitung folgt nach dem Deploy)
+2. E-Mail-Infrastruktur
+   - Einrichtung der Sendequeue auf der verifizierten Domain `notify.souveraensein.ch`.
+   - Neue Vorlage `heimweh-welcome` in der Marken-Optik der Website (warmes Beige, Gold-Akzente, Grossbuchstaben-Titel, Poppins). Keine langen Gedankenstriche.
+   - Inhalte der Mail: persönliche Anrede, Bestätigung des Kaufs, Bestellnummer, zwei Buttons (Rahmenvertrag / Rechnung), CTA zum Vibecall via Calendly, Footer mit Kontakt (Telefon, Instagram, Website).
 
-**Frontend:**
-- ThriveCart-Embed-Script in `__root.tsx` einmal global laden
-- Bestehende ThriveCart-`<a>`-Links bekommen `data-thrivecart`-Attribut für Modal-Auslösung
-- Neue Route `src/routes/buchen.tsx` mit Calendly-Inline-Widget und eigenem `<head>` (Title, Description, OG)
-- Alle Calendly-Links auf `/buchen` umstellen
-- Header-CTA aktualisieren
+3. PDF-Generierung serverseitig
+   - Rahmenvertrag: bestehendes Layout aus `danke.tsx` als serverseitige Vorlage nachbauen (gleiche Farben/Fonts).
+   - Rechnung: gleiches Layout, mit Bestellnummer, Datum, Betrag, MwSt-Hinweis, Zahlungsstatus "bezahlt via ThriveCart".
 
-**Datenbank-Migration:**
-- Tabelle `purchases` mit RLS (nur service_role schreibt; keine Client-Reads nötig)
+4. ThriveCart-Webhook
+   - Öffentliche Route unter `/api/public/thrivecart-webhook` (POST).
+   - Prüft ThriveCart-Signatur (Secret aus Cloud-Secrets), validiert Eingaben (Zod).
+   - Nur beim Event "order.success" wird eine Mail geschickt. Refunds/andere Events werden ignoriert.
+   - Idempotent: gleiche Order-ID sendet nur einmal.
 
-## Was du brauchst (sage Bescheid, wenn nicht vorhanden)
-- ThriveCart Webhook-Secret (frei wählbar, in ThriveCart unter Settings → API & Webhooks)
-- Eine Versanddomain für E-Mails (z. B. `notify.souveraensein.ch`) — Setup-Dialog erscheint automatisch
+5. Kleinigkeit auf der Website
+   - `/danke` bleibt wie es ist, bekommt aber einen kleinen Hinweis "Du erhältst gleich eine Mail von uns mit Rahmenvertrag und Rechnung."
+
+## Was du (Carina) einmalig einrichten musst
+
+Damit alles live gehen kann, brauche ich zwei Informationen von ThriveCart und muss sie als Secrets speichern:
+
+1. Im ThriveCart-Dashboard unter Settings > API & Webhooks:
+   - Webhook-URL setzen auf: `https://souveraensein.ch/api/public/thrivecart-webhook`
+   - Das "Notification/Webhook Secret" kopieren (ThriveCart nennt es je nach Version "Secret Word" oder "Webhook Secret").
+2. Redirect-URL nach dem Kauf auf: `https://souveraensein.ch/danke?name={customer_name}&email={customer_email}&order={order_id}` (falls noch nicht gesetzt).
+
+Ich frage dich nach dem Approval nach dem Webhook-Secret und speichere es sicher.
+
+## Technisches (nicht wichtig fürs Verständnis)
+
+- Neuer Bucket `order-documents` (privat), signierte URLs, 30 Tage gültig.
+- Neue Tabelle `orders` mit RLS (nur Service-Role darf schreiben; kein öffentlicher Zugriff).
+- E-Mail-Template unter `src/lib/email-templates/heimweh-welcome.tsx`, registriert in `registry.ts`.
+- PDF-Erzeugung mit `pdf-lib` im Worker (Worker-kompatibel, keine nativen Binaries).
+- Webhook: `src/routes/api/public/thrivecart-webhook.ts`, verifiziert via HMAC/Secret-Wort, benutzt Service-Role für Storage-Upload und Enqueue.
+- Sende-Trigger via interner Aufruf von `/lovable/email/transactional/send` mit Idempotenzschlüssel `welcome-{order_id}`.
+- Secret `THRIVECART_WEBHOOK_SECRET` wird nach Approval angefordert.
+
+## Nach dem Bauen
+
+- Kurzer Test: ich löse den Webhook mit Testdaten aus und prüfe, dass Mail + PDFs korrekt ankommen.
+- Bereitstellung der finalen URL für ThriveCart und knappe Anleitung zum Eintragen.
