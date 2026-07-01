@@ -68,10 +68,10 @@ const CSS = `
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(26,16,8,0.12), 0 0 0 1px rgba(201,169,110,0.25);
   }
-  .bk-cal { width: 100%; min-height: 760px; border: 0; display: block; }
+  .bk-cal { width: 100%; height: 1100px; min-height: 1100px; border: 0; display: block; }
   @media (max-width: 720px) {
     .bk { padding: 24px 16px 56px; }
-    .bk-cal { min-height: 1100px; }
+    .bk-cal { height: 1400px; min-height: 1400px; }
   }
 `;
 
