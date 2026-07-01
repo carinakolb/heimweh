@@ -1,4 +1,5 @@
 import type { ComponentType } from 'react'
+import { template as heimwehWelcomeTemplate } from './heimweh-welcome'
 
 export interface TemplateEntry {
   component: ComponentType<any>
@@ -20,5 +21,3 @@ export interface TemplateEntry {
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'heimweh-welcome': heimwehWelcomeTemplate,
 }
-
-import { template as heimwehWelcomeTemplate } from './heimweh-welcome'
