@@ -101,6 +101,54 @@ export type Database = {
         }
         Relationships: []
       }
+      orders: {
+        Row: {
+          amount_cents: number | null
+          contract_pdf_path: string | null
+          created_at: string
+          currency: string | null
+          customer_email: string
+          customer_name: string | null
+          id: string
+          invoice_pdf_path: string | null
+          product_name: string | null
+          raw_payload: Json | null
+          thrivecart_order_id: string
+          updated_at: string
+          welcome_email_sent_at: string | null
+        }
+        Insert: {
+          amount_cents?: number | null
+          contract_pdf_path?: string | null
+          created_at?: string
+          currency?: string | null
+          customer_email: string
+          customer_name?: string | null
+          id?: string
+          invoice_pdf_path?: string | null
+          product_name?: string | null
+          raw_payload?: Json | null
+          thrivecart_order_id: string
+          updated_at?: string
+          welcome_email_sent_at?: string | null
+        }
+        Update: {
+          amount_cents?: number | null
+          contract_pdf_path?: string | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string
+          customer_name?: string | null
+          id?: string
+          invoice_pdf_path?: string | null
+          product_name?: string | null
+          raw_payload?: Json | null
+          thrivecart_order_id?: string
+          updated_at?: string
+          welcome_email_sent_at?: string | null
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
